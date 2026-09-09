@@ -78,4 +78,5 @@ begin
 end; $$;
 revoke all on function public.delete_my_account() from public;
 grant execute on function public.delete_my_account() to authenticated;
+-- Puis exécuter backend/migrations/002_multicity_notifications.sql.
 commit;

@@ -1,6 +1,6 @@
-# À table — Montmagny
+# À table — menus scolaires
 
-Première application iPhone native SwiftUI pour lire les menus scolaires et centres de loisirs de Montmagny (95360). Application indépendante, sans reprise du code, des images ou de la marque Foodi.
+Application iPhone native SwiftUI et application web pour lire les menus scolaires par ville. Montmagny (95360) est la première ville intégrée ; le client web ajoute Argenteuil (95100). Application indépendante, sans reprise du code, des images ou de la marque Foodi.
 
 ## Dans cette version
 
@@ -11,7 +11,13 @@ Première application iPhone native SwiftUI pour lire les menus scolaires et cen
 - Actualisation manuelle et cache local horodaté. Une donnée vide réussie remplace l'ancien menu. Un cache de moins d'une heure évite un appel répété. Les données embarquées réelles du 9 septembre 2026 servent de secours initial, toujours signalé comme copie.
 - Accès au programme de la mairie pour les dates sans menu disponible.
 - Zones de sécurité iOS, Dynamic Type, modes clair/sombre, portrait et paysage. Mode Jour automatique pour les tailles de texte d'accessibilité.
-- Écrans Parents, commentaires par date, compte, signalement et blocage, préparés pour un backend Supabase. **Dans l'IPA initial, les échanges sont désactivés car le backend n'est pas encore provisionné. Aucun faux compte ni faux message n'est présenté.**
+- Écrans Parents, commentaires par date, compte, signalement et blocage reliés à Supabase dans les builds configurés.
+
+## Application web et Vercel
+
+Le dossier `web/` contient l'application Next.js responsive. Elle lit Montmagny via Foodi et extrait les menus élémentaires ou maternels depuis les PDF officiels d'Argenteuil. Le registre `web/lib/cities.ts` permet d'ajouter une ville avec son connecteur. La tâche Vercel vérifie les sources chaque jour ouvré.
+
+Configurer sur Vercel le dossier racine `web` et les variables `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Ne jamais utiliser la clé `service_role` dans le navigateur. Le domaine acheté chez Amen pourra ensuite être rattaché au projet Vercel par les enregistrements DNS indiqués par Vercel.
 
 ## IPA non signé via GitHub
 
@@ -35,13 +41,13 @@ Le déploiement minimal est iOS 17.0. Le workflow utilise l'image `macos-26` et 
 
 ## Activer l'espace parents
 
-1. Créer un projet Supabase et appliquer `backend/schema.sql` dans une base neuve.
+1. Créer un projet Supabase, appliquer `backend/schema.sql`, puis `backend/migrations/002_multicity_notifications.sql`.
 2. Activer la confirmation des adresses e-mail et configurer l'envoi de mails dans Supabase.
 3. Ajouter les variables GitHub Actions `SUPABASE_URL` et `SUPABASE_PUBLISHABLE_KEY`, puis recompiler. Utiliser seulement la clé publiable/anon, **jamais service_role**.
 4. Les comptes utilisent Supabase Auth ; les sessions sont stockées dans le trousseau iOS. Les messages ne sont visibles qu'aux utilisateurs connectés. La sécurité par ligne limite les insertions/suppressions à leur auteur et masque les participants bloqués. Les signalements doivent être traités par le gestionnaire dans Supabase (`hidden=true` pour masquer un message).
-5. Avant ouverture réelle : tester avec deux comptes séparés les droits d'accès et la suppression de compte, attribuer un responsable de modération et configurer le parcours de récupération de mot de passe et les mentions de confidentialité. Ces opérations n'ont pas été exécutées sur un backend distant dans cette livraison.
+5. Avant ouverture réelle : tester avec deux comptes séparés les droits d'accès et la suppression de compte, attribuer un responsable de modération et configurer le parcours de récupération de mot de passe et les mentions de confidentialité.
 
-Le backend est commun aux futurs clients web/Android ; l'interface SwiftUI est spécifique à iPhone. Le périmètre de cette livraison est l'application iPhone et son IPA.
+Le backend est commun aux clients iPhone, web et au futur client Android.
 
 ## Sources
 
