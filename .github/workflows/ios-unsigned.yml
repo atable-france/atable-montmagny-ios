@@ -1,0 +1,109 @@
+name: iPhone - IPA non signe
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'backend/**']
+permissions:
+  contents: read
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Outils Xcode
+        run: |
+          xcodebuild -version
+          brew install xcodegen
+      - name: Configuration de l'espace parents
+        env:
+          BACKEND_URL: ${{ vars.SUPABASE_URL }}
+          BACKEND_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os,json,pathlib
+          pathlib.Path('ATable/Resources/Backend.json').write_text(json.dumps({
+            'url':os.environ.get('BACKEND_URL',''),
+            'publishableKey':os.environ.get('BACKEND_KEY','')
+          }))
+          PY
+      - name: Generer le projet
+        run: xcodegen generate
+      - name: Compiler pour iPhone sans signature
+        run: |
+          set -o pipefail
+          xcodebuild -project ATable.xcodeproj -scheme ATable \
+            -configuration Release -sdk iphoneos -destination 'generic/platform=iOS' \
+            -derivedDataPath build/device CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY='' build 2>&1 | tee build-device.log | xcbeautify
+      - name: Creer l'IPA
+        run: |
+          mkdir -p build/package/Payload build/artifacts
+          cp -R build/device/Build/Products/Release-iphoneos/ATable.app build/package/Payload/
+          APP=build/package/Payload/ATable.app
+          if codesign -dv "$APP" 2>/dev/null; then codesign --remove-signature "$APP"; fi
+          test ! -e "$APP/embedded.mobileprovision"
+          if codesign -dv "$APP" 2>/dev/null; then echo 'Signature inattendue'; exit 1; fi
+          cd build/package
+          zip -qr ../artifacts/ATable-Montmagny-unsigned.ipa Payload
+          cd ../..
+          shasum -a 256 build/artifacts/*.ipa > build/artifacts/SHA256.txt
+      - name: Publier le fichier IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ATable-Montmagny-unsigned
+          path: build/artifacts/*
+          retention-days: 30
+          if-no-files-found: error
+      - name: Choisir les trois simulateurs iPhone 17
+        run: |
+          xcrun simctl list devices available --json > build/devices.json
+          python3 - <<'PY'
+          import json,os,pathlib
+          all=json.load(open('build/devices.json'))['devices']
+          devices=[d for runtime,items in all.items() if '.iOS-' in runtime for d in items]
+          selected={}
+          for name in ['iPhone 17','iPhone 17 Pro','iPhone 17 Pro Max']:
+            matching=[d for d in devices if d['name']==name]
+            if not matching: raise SystemExit('Simulateur absent: '+name)
+            selected[name]=matching[0]['udid']
+          pathlib.Path('build/selected-devices.json').write_text(json.dumps(selected))
+          with open(os.environ['GITHUB_ENV'],'a') as f:f.write('TEST_DEVICE='+selected['iPhone 17']+'\n')
+          PY
+      - name: Tests unitaires et navigation iPhone
+        run: |
+          set -o pipefail
+          xcodebuild -project ATable.xcodeproj -scheme ATable \
+            -destination "platform=iOS Simulator,id=$TEST_DEVICE" \
+            -derivedDataPath build/simulator -resultBundlePath build/Tests.xcresult \
+            CODE_SIGNING_ALLOWED=NO test 2>&1 | tee build-test.log | xcbeautify
+      - name: Captures sur iPhone 17, 17 Pro et 17 Pro Max
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,subprocess,time
+          def run(*args):subprocess.run(args,check=True)
+          out=pathlib.Path('build/screenshots');out.mkdir(exist_ok=True)
+          for name,uid in json.load(open('build/selected-devices.json')).items():
+            subprocess.run(['xcrun','simctl','boot',uid],check=False)
+            run('xcrun','simctl','bootstatus',uid,'-b')
+            run('xcrun','simctl','status_bar',uid,'override','--time','9:41','--dataNetwork','wifi','--wifiMode','active','--wifiBars','3','--batteryState','charged','--batteryLevel','100')
+            run('xcrun','simctl','install',uid,'build/simulator/Build/Products/Debug-iphonesimulator/ATable.app')
+            run('xcrun','simctl','launch','--terminate-running-process',uid,'app.atable.montmagny','--screenshots')
+            time.sleep(4)
+            run('xcrun','simctl','io',uid,'screenshot',str(out/(name.replace(' ','-')+'.png')))
+            run('xcrun','simctl','shutdown',uid)
+          PY
+      - name: Rapports et captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-iphone
+          path: |
+            build/screenshots/
+            build/Tests.xcresult/
+            build-*.log
+          retention-days: 14

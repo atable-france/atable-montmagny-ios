@@ -1,0 +1,104 @@
+import Foundation
+import SwiftUI
+
+enum FoodiError: LocalizedError {
+    case invalidData, server(Int), api(String)
+    var errorDescription: String? {
+        switch self {
+        case .invalidData: "Le menu reçu n’a pas le format attendu."
+        case .server(let status): "Le service des menus est indisponible (\(status))."
+        case .api: "Les menus ne sont pas accessibles pour le moment."
+        }
+    }
+}
+
+struct FoodiService {
+    static let posID = "UG9zOjM4ODg1ODg="
+    static let endpoint = URL(string: "https://api.foodi.fr/graphql")!
+    static let municipalURL = URL(string: "https://www.villedemontmagny.fr/enfance/le-periscolaire/la-restauration-scolaire/")!
+
+    func fetch(monday: Date) async throws -> WeekMenu {
+        let dates = MenuDate.weekDates(monday)
+        let fields = dates.enumerated().map { i, date in
+            "jour\(i): menus(date: \"\(date)\") { day elements { id label description allergens certifications dish { id dishGroup { id } } } }"
+        }.joined(separator: "\n")
+        let query = "query MontmagnySemaine($id: ID!) { getPos(id: $id) { id name \(fields) } }"
+        var request = URLRequest(url: Self.endpoint)
+        request.httpMethod = "POST"; request.timeoutInterval = 20
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONSerialization.data(withJSONObject: ["operationName": "MontmagnySemaine", "query": query, "variables": ["id": Self.posID]])
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw FoodiError.server((response as? HTTPURLResponse)?.statusCode ?? 0)
+        }
+        guard let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] else { throw FoodiError.invalidData }
+        if let errors = json["errors"] as? [[String: Any]], !errors.isEmpty { throw FoodiError.api("GraphQL") }
+        guard let root = json["data"] as? [String: Any], let pos = root["getPos"] as? [String: Any],
+              pos["id"] as? String == Self.posID, let name = pos["name"] as? String else { throw FoodiError.invalidData }
+        var days: [MenuDay] = []
+        for (i, date) in dates.enumerated() {
+            guard let menus = pos["jour\(i)"] as? [[String: Any]] else { throw FoodiError.invalidData }
+            let value = try JSONSerialization.data(withJSONObject: menus)
+            days.append(MenuDay(date: date, menus: try JSONDecoder().decode([DailyMenu].self, from: value)))
+        }
+        let week = WeekMenu(weekStart: dates[0], fetchedAt: ISO8601DateFormatter().string(from: Date()), restaurant: RestaurantRef(id: Self.posID, name: name), days: days)
+        try week.validate(for: dates)
+        return week
+    }
+}
+
+@MainActor
+final class MenuStore: ObservableObject {
+    @Published var monday = MenuDate.monday(MenuDate.today)
+    @Published var week: WeekMenu?
+    @Published var loading = false
+    @Published var stale = false
+    @Published var message: String?
+    private var generation = 0
+    private let service = FoodiService()
+
+    func move(_ offset: Int) { monday = MenuDate.add(offset * 7, to: monday) }
+    func currentWeek() { monday = MenuDate.monday(MenuDate.today) }
+    private func file(for key: String) -> URL? {
+        let root = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let directory = root.appendingPathComponent("MontmagnyMenus", isDirectory: true)
+        try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        return directory.appendingPathComponent(key + ".json")
+    }
+    private func cached(_ key: String) -> WeekMenu? {
+        if let url = file(for: key), let data = try? Data(contentsOf: url), let value = try? JSONDecoder().decode(WeekMenu.self, from: data),
+           (try? value.validate(for: MenuDate.weekDates(monday))) != nil { return value }
+        if let url = Bundle.main.url(forResource: "menus-seed", withExtension: "json"),
+           let data = try? Data(contentsOf: url), let seed = try? JSONDecoder().decode(MenuSeed.self, from: data),
+           let value = seed.weeks.first(where: { $0.weekStart == key }),
+           (try? value.validate(for: MenuDate.weekDates(monday))) != nil { return value }
+        return nil
+    }
+    func load(force: Bool = false) async {
+        generation += 1
+        let requestID = generation
+        let requestedMonday = monday
+        let key = MenuDate.key(requestedMonday)
+        let previous = cached(key)
+        week = previous; message = nil; stale = previous != nil
+        if ProcessInfo.processInfo.arguments.contains("--screenshots") {
+            loading = false; stale = true; return
+        }
+        if !force, let previous, let date = ISO8601DateFormatter().date(from: previous.fetchedAt),
+           Date().timeIntervalSince(date) >= 0, Date().timeIntervalSince(date) < 3600 {
+            loading = false; stale = false; return
+        }
+        loading = true
+        do {
+            let fresh = try await service.fetch(monday: requestedMonday)
+            guard generation == requestID, !Task.isCancelled else { return }
+            week = fresh; stale = false
+            if let path = file(for: key), let data = try? JSONEncoder().encode(fresh) { try? data.write(to: path, options: .atomic) }
+        } catch {
+            guard generation == requestID, !Task.isCancelled else { return }
+            message = previous == nil ? "Connexion impossible. Réessayez dans un instant." : "Derniers menus enregistrés. La mise à jour est indisponible."
+            stale = true
+        }
+        if generation == requestID { loading = false }
+    }
+}

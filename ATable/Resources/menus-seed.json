@@ -1,0 +1,3698 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-09T08:13:38.220Z",
+  "source": "https://api.foodi.fr/graphql",
+  "restaurant": {
+    "id": "UG9zOjM4ODg1ODg=",
+    "name": "Menu Scolaire et Centres de Loisirs",
+    "city": "Montmagny",
+    "postalCode": "95360"
+  },
+  "cacheTtlSeconds": 3600,
+  "supplementarySource": {
+    "url": "https://www.villedemontmagny.fr/enfance/le-periscolaire/la-restauration-scolaire/",
+    "format": "pdf",
+    "automaticImport": false,
+    "purpose": "Consulter les menus prévisionnels municipaux pour les dates non retournées par Foodi."
+  },
+  "status": "ready",
+  "weeks": [
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:30.677Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-08-31",
+      "days": [
+        {
+          "date": "2026-08-31",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-09-01",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-09-02",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-09-03",
+          "menus": [
+            {
+              "day": "2026-09-03",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMTksOTAyMjItMjAyNjA5MDM=",
+                  "label": "Croissant",
+                  "description": "Croissant",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200019,90222-20260903",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMjcsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Pomme bicolore CE2",
+                  "description": "Pomme bicolore CE2",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200027,90222-20260903",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260903",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA3NzYsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Omelette Bio sauce tomate",
+                  "description": "Omelette Bio sauce tomate",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200776,90222-20260903",
+                  "allergens": [
+                    "MILK",
+                    "EGG",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260903",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAyODYsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Yaourt Bio nature et sucre",
+                  "description": "Yaourt Bio nature et sucre",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100286,90222-20260903",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEwMjksOTAyMjItMjAyNjA5MDM=",
+                  "label": "Tomate Bio et mozzarella",
+                  "description": "Tomate Bio et mozzarella",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101029,90222-20260903",
+                  "allergens": [
+                    "MUSTARD",
+                    "SULFITE",
+                    "INFO_NOT_DISCLOSED",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEwODAsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Concombre Bio mozzarella",
+                  "description": "Concombre Bio mozzarella",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101080,90222-20260903",
+                  "allergens": [
+                    "MUSTARD",
+                    "SULFITE",
+                    "INFO_NOT_DISCLOSED",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEwOTksOTAyMjItMjAyNjA5MDM=",
+                  "label": "Yaourt Bio saveur vanille",
+                  "description": "Yaourt Bio saveur vanille",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101099,90222-20260903",
+                  "allergens": [
+                    "MILK",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE3OTAsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Sauté de boeuf sauce tomate",
+                  "description": "Sauté de boeuf sauce tomate",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101790,90222-20260903",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MjUsOTAyMjItMjAyNjA5MDM=",
+                  "label": "Pomme de terre et courgette persillées",
+                  "description": "Pomme de terre et courgette persillées",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101825,90222-20260903",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-04",
+          "menus": [
+            {
+              "day": "2026-09-04",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAxMTQsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Compote de pomme",
+                  "description": "Compote de pomme",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200114,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDAxNzAsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Petits suisses aux fruits",
+                  "description": "Petits suisses aux fruits",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0100170,90222-20260904",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzNTQsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101354,90222-20260904",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDE0MjcsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Tartinade au thon",
+                  "description": "Tartinade au thon",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101427,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "FISH",
+                    "MILK",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "HVE",
+                    "SUSTAINABLE_FISHING",
+                    "BLUE_WHITE_HEARTH"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ08wNzAkLDkwMjIyLTIwMjYwOTA0",
+                  "label": "Coulommiers",
+                  "description": "Coulommiers",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CO070$,90222-20260904",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAwOTksOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Tomme blanche",
+                  "description": "Tomme blanche",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200099,90222-20260904",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAyMTEsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Riz Bio pilaf",
+                  "description": "Riz Bio pilaf",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200211,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260904",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA4NzEsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Haricots vert Bio persillés",
+                  "description": "Haricots vert Bio persillés",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100871,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE3NTQsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Peche BIO",
+                  "description": "Peche BIO",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101754,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE3NTUsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Nectarine BIO",
+                  "description": "Nectarine BIO",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101755,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE5MTEsOTAyMjItMjAyNjA5MDQ=",
+                  "label": "Filet de hoki sauce massala",
+                  "description": "Filet de hoki sauce massala",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101911,90222-20260904",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "FISH",
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "SUSTAINABLE_FISHING"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    },
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:30.813Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-09-07",
+      "days": [
+        {
+          "date": "2026-09-07",
+          "menus": [
+            {
+              "day": "2026-09-07",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA0MzUsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Jus de pommes",
+                  "description": "Jus de pommes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200435,90222-20260907",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA0OTgsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Fromage samos",
+                  "description": "Fromage samos",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200498,90222-20260907",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzNTQsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101354,90222-20260907",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzODgsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Liégeois chocolat",
+                  "description": "Liégeois chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101388,90222-20260907",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyRkkwNTUkLDkwMjIyLTIwMjYwOTA3",
+                  "label": "Filet de colin sauce créme",
+                  "description": "Filet de colin sauce créme",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402FI055$,90222-20260907",
+                  "allergens": [
+                    "MILK",
+                    "FISH",
+                    "GLUTEN",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "SUSTAINABLE_FISHING"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyUEEwODgkLDkwMjIyLTIwMjYwOTA3",
+                  "label": "Pastéque",
+                  "description": "Pastéque",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402PA088$,90222-20260907",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyUE8wODYkLDkwMjIyLTIwMjYwOTA3",
+                  "label": "Poêlée campagnarde",
+                  "description": "Poêlée campagnarde",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402PO086$,90222-20260907",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA0NzQsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Melon charentais",
+                  "description": "Melon charentais",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200474,90222-20260907",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA2NDcsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Liégeois au chocolat",
+                  "description": "Liégeois au chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200647,90222-20260907",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260907",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA4MDIsOTAyMjItMjAyNjA5MDc=",
+                  "label": "Flan vanille nappé caramel",
+                  "description": "Flan vanille nappé caramel",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100802,90222-20260907",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-08",
+          "menus": [
+            {
+              "day": "2026-09-08",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAzNDQsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Marbré chocolat",
+                  "description": "Marbré chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200344,90222-20260908",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260908",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3OTUsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Abricot",
+                  "description": "Abricot",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200795,90222-20260908",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260908",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxOTQsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Salade de fruits maison",
+                  "description": "Salade de fruits maison",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100194,90222-20260908",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA5NTgsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Penne Bio",
+                  "description": "Penne Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100958,90222-20260908",
+                  "allergens": [
+                    "GLUTEN",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEyNjAsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Bolognaise de lentilles",
+                  "description": "Bolognaise de lentilles",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101260,90222-20260908",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "CELERY",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "HVE",
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MjgsOTAyMjItMjAyNjA5MDg=",
+                  "label": "Betterave et feta vinaigrette",
+                  "description": "Betterave et feta vinaigrette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101828,90222-20260908",
+                  "allergens": [
+                    "MILK",
+                    "MUSTARD",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "AOP",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MjksOTAyMjItMjAyNjA5MDg=",
+                  "label": "Salade de mais et feta vinaigrette",
+                  "description": "Salade de mais et feta vinaigrette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101829,90222-20260908",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MILK",
+                    "MUSTARD",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "AOP"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-09",
+          "menus": [
+            {
+              "day": "2026-09-09",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtNDAyMDI3NjcsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Chausson aux pommes",
+                  "description": "Chausson aux pommes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-40202767,90222-20260909",
+                  "allergens": [
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDAwNzQsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Petits suisse et sucre",
+                  "description": "Petits suisse et sucre",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0100074,90222-20260909",
+                  "allergens": [
+                    "MILK",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEwMTAsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Nectarine",
+                  "description": "Nectarine",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101010,90222-20260909",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQkEwMDIkLDkwMjIyLTIwMjYwOTA5",
+                  "label": "Banane RUP",
+                  "description": "Banane RUP",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402BA002$,90222-20260909",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyUE8xMjQkLDkwMjIyLTIwMjYwOTA5",
+                  "label": "Pomme golden",
+                  "description": "Pomme golden",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402PO124$,90222-20260909",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE",
+                    "IGP"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAyMTEsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Riz Bio pilaf",
+                  "description": "Riz Bio pilaf",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200211,90222-20260909",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA4MTksOTAyMjItMjAyNjA5MDk=",
+                  "label": "CHILI CON CARNE*",
+                  "description": "CHILI CON CARNE*",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200819,90222-20260909",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "SESAME",
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260909",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA1NTEsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Chili sin carne",
+                  "description": "Chili sin carne",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100551,90222-20260909",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "SESAME"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA5MDAsOTAyMjItMjAyNjA5MDk=",
+                  "label": "Brie",
+                  "description": "Brie",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100900,90222-20260909",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-10",
+          "menus": [
+            {
+              "day": "2026-09-10",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAxMTQsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Compote de pomme",
+                  "description": "Compote de pomme",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200114,90222-20260910",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260910",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEyNjksOTAyMjItMjAyNjA5MTA=",
+                  "label": "Confiture de fraise",
+                  "description": "Confiture de fraise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101269,90222-20260910",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDE0MDQsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Baguette viennoise",
+                  "description": "Baguette viennoise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101404,90222-20260910",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAyMDAsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Tarte aux pommes",
+                  "description": "Tarte aux pommes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200200,90222-20260910",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMDgsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Petit suisse aromatisé aux fruits",
+                  "description": "Petit suisse aromatisé aux fruits",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100108,90222-20260910",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260910",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAyNjksOTAyMjItMjAyNjA5MTA=",
+                  "label": "Poulet LR basquaise",
+                  "description": "Poulet LR basquaise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100269,90222-20260910",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "GLUTEN",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA0NDgsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Petits suisses nature Bio et sucre",
+                  "description": "Petits suisses nature Bio et sucre",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100448,90222-20260910",
+                  "allergens": [
+                    "MILK",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA4ODMsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Brocolis Bio",
+                  "description": "Brocolis Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100883,90222-20260910",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MzEsOTAyMjItMjAyNjA5MTA=",
+                  "label": "Haricot blanc à la basquaise",
+                  "description": "Haricot blanc à la basquaise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101831,90222-20260910",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-11",
+          "menus": [
+            {
+              "day": "2026-09-11",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMTksOTAyMjItMjAyNjA5MTE=",
+                  "label": "Croissant",
+                  "description": "Croissant",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200019,90222-20260911",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMzUsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Orange",
+                  "description": "Orange",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200035,90222-20260911",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260911",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAyNDcsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Glace vanille chocolat",
+                  "description": "Glace vanille chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200247,90222-20260911",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260911",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxNzYsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Carottes Bio vinaigrette et edam",
+                  "description": "Carottes Bio vinaigrette et edam",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100176,90222-20260911",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MUSTARD",
+                    "SULFITE",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxODYsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Légumes tajine",
+                  "description": "Légumes tajine",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100186,90222-20260911",
+                  "allergens": [
+                    "CELERY",
+                    "ALLERGEN_FREE",
+                    "MUSTARD"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAzMDgsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Tajine de veau aux pruneaux",
+                  "description": "Tajine de veau aux pruneaux",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100308,90222-20260911",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA2NzEsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Semoule Bio",
+                  "description": "Semoule Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100671,90222-20260911",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MzIsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Chou blanc et edam vinaigrette",
+                  "description": "Chou blanc et edam vinagrette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101832,90222-20260911",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MILK",
+                    "MUSTARD",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MzcsOTAyMjItMjAyNjA5MTE=",
+                  "label": "Tajine de pois chiches aux pruneaux",
+                  "description": "Tajine de pois chiches aux pruneaux",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101837,90222-20260911",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    },
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:30.931Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-09-14",
+      "days": [
+        {
+          "date": "2026-09-14",
+          "menus": [
+            {
+              "day": "2026-09-14",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMzIsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Banane",
+                  "description": "Banane",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200032,90222-20260914",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260914",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzMzEsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Gaufre liegeoise",
+                  "description": "Gaufre liegeoise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101331,90222-20260914",
+                  "allergens": [
+                    "GLUTEN",
+                    "EGG",
+                    "SOYA"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDQ2OTgsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Emincé de volaille sauce verte",
+                  "description": "Emincé de volaille sauce verte",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40204698,90222-20260914",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "INFO_NOT_DISCLOSED",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDUwMzMsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Donuts",
+                  "description": "Donuts",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40205033,90222-20260914",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SOYA"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA1ODIsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "DONUTS CHOCOLAT*",
+                  "description": "DONUTS CHOCOLAT*",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200582,90222-20260914",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SOYA"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260914",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAyNzMsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Haricots beurre aux oignons",
+                  "description": "Haricots beurre aux oignons",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100273,90222-20260914",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA4ODQsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "FILET DE LIEU SAUCE VERTE /*",
+                  "description": "FILET DE LIEU SAUCE VERTE /*",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100884,90222-20260914",
+                  "allergens": [
+                    "MILK",
+                    "FISH",
+                    "GLUTEN",
+                    "INFO_NOT_DISCLOSED",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "SUSTAINABLE_FISHING",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4MzgsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Tomate BIO sauce fromage frais",
+                  "description": "Tomate BIO sauce fromage frais",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101838,90222-20260914",
+                  "allergens": [
+                    "MILK",
+                    "INFO_NOT_DISCLOSED",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NDAsOTAyMjItMjAyNjA5MTQ=",
+                  "label": "Concombre BIO sauce fromage frais",
+                  "description": "Concombre BIO sauce fromage frais",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101840,90222-20260914",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED",
+                    "ALLERGEN_FREE",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-15",
+          "menus": [
+            {
+              "day": "2026-09-15",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMjcsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Pomme bicolore CE2",
+                  "description": "Pomme bicolore CE2",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200027,90222-20260915",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwNzQsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Yaourt aromatisé",
+                  "description": "Yaourt aromatisé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200074,90222-20260915",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEwNDUsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Emmental",
+                  "description": "Emmental",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101045,90222-20260915",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzNTQsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101354,90222-20260915",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDUxMDcsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Macaronis Bio et rapé",
+                  "description": "Macaronis Bio et rapé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40205107,90222-20260915",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyU0ExNzMkLDkwMjIyLTIwMjYwOTE1",
+                  "label": "Salade vitaminée aux agrumes",
+                  "description": "Salade vitaminée aux agrumes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402SA173$,90222-20260915",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "INFO_NOT_DISCLOSED",
+                    "MUSTARD",
+                    "SULFITE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260915",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEwNTksOTAyMjItMjAyNjA5MTU=",
+                  "label": "YAOURT BIO NATURE SUCRE /*",
+                  "description": "YAOURT BIO NATURE SUCRE /*",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101059,90222-20260915",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDExODksOTAyMjItMjAyNjA5MTU=",
+                  "label": "Salade Waldorf",
+                  "description": "Salade Waldorf",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101189,90222-20260915",
+                  "allergens": [
+                    "EGG",
+                    "INFO_NOT_DISCLOSED",
+                    "MUSTARD",
+                    "FRUIT_SAC",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEyMTYsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Yaourt nature Bio et confiture",
+                  "description": "Yaourt nature Bio et confiture",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101216,90222-20260915",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE0OTIsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Omelette aux herbes",
+                  "description": "Omelette aux herbes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101492,90222-20260915",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "EGG"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE0OTcsOTAyMjItMjAyNjA5MTU=",
+                  "label": "Sauté de boeuf sauce diable",
+                  "description": "Sauté de boeuf sauce diable",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101497,90222-20260915",
+                  "allergens": [
+                    "GLUTEN",
+                    "MUSTARD",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-16",
+          "menus": [
+            {
+              "day": "2026-09-16",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMjEsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Pâte à tartiner choco/noisettes",
+                  "description": "Pâte à tartiner choco/noisettes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200021,90222-20260916",
+                  "allergens": [
+                    "MILK",
+                    "SOYA",
+                    "FRUIT_SAC"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAyNTUsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Jus d'ananas",
+                  "description": "Jus d'ananas",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200255,90222-20260916",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzNTQsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101354,90222-20260916",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDE3NzEsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Fromage blanc nature",
+                  "description": "Fromage blanc nature",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101771,90222-20260916",
+                  "allergens": [
+                    "MILK",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ0EwNDMkLDkwMjIyLTIwMjYwOTE2",
+                  "label": "Carottes Vichy",
+                  "description": "Carottes Vichy",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CA043$,90222-20260916",
+                  "allergens": [
+                    "MILK",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAxNzQsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Riz au lait",
+                  "description": "Riz au lait",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200174,90222-20260916",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260916",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDEyNzEsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Pané sarasin et lentilles",
+                  "description": "Pané sarasin et lentilles",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101271,90222-20260916",
+                  "allergens": [
+                    "GLUTEN",
+                    "CELERY"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE3MDUsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Camembert BIO",
+                  "description": "Camembert BIO",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101705,90222-20260916",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NDEsOTAyMjItMjAyNjA5MTY=",
+                  "label": "Paleron de boeuf sauce charcutière",
+                  "description": "Paleron de boeuf sauce charcutière",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101841,90222-20260916",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "GLUTEN",
+                    "MUSTARD",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-17",
+          "menus": [
+            {
+              "day": "2026-09-17",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMTksOTAyMjItMjAyNjA5MTc=",
+                  "label": "Croissant",
+                  "description": "Croissant",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200019,90222-20260917",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMzUsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Orange",
+                  "description": "Orange",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200035,90222-20260917",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260917",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDA0OTUsOTAyMjItMjAyNjA5MTc=",
+                  "label": "JULIENNE DE LEGUMES /*",
+                  "description": "JULIENNE DE LEGUMES /*",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40200495,90222-20260917",
+                  "allergens": [
+                    "CELERY",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAxNzAsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Marmite de poisson à l'oseille",
+                  "description": "Marmite de poisson à l'oseille",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200170,90222-20260917",
+                  "allergens": [
+                    "MILK",
+                    "FISH",
+                    "ALLERGEN_FREE",
+                    "GLUTEN",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "SUSTAINABLE_FISHING",
+                    "FAIR_TRADE",
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAyMTEsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Riz Bio pilaf",
+                  "description": "Riz Bio pilaf",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200211,90222-20260917",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAzMzIsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Fromage blanc aux fruits",
+                  "description": "Fromage blanc aux fruits",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200332,90222-20260917",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA1MDIsOTAyMjItMjAyNjA5MTc=",
+                  "label": "PRUNES BIO*",
+                  "description": "PRUNES BIO*",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200502,90222-20260917",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260917",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA1ODQsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Fromage blanc Bio nature et sucre",
+                  "description": "Fromage blanc Bio nature et sucre",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100584,90222-20260917",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDExNjMsOTAyMjItMjAyNjA5MTc=",
+                  "label": "Poire Bio",
+                  "description": "Poire Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101163,90222-20260917",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-18",
+          "menus": [
+            {
+              "day": "2026-09-18",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAxMTQsOTAyMjItMjAyNjA5MTg=",
+                  "label": "Compote de pomme",
+                  "description": "Compote de pomme",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200114,90222-20260918",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA0ODcsOTAyMjItMjAyNjA5MTg=",
+                  "label": "Brownie",
+                  "description": "Brownie",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200487,90222-20260918",
+                  "allergens": [
+                    "GLUTEN",
+                    "EGG",
+                    "FRUIT_SAC"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDAwNzQsOTAyMjItMjAyNjA5MTg=",
+                  "label": "Petits suisse et sucre",
+                  "description": "Petits suisse et sucre",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0100074,90222-20260918",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ0EwMTUkLDkwMjIyLTIwMjYwOTE4",
+                  "label": "Carottes HVE rapées vinaigrette",
+                  "description": "Carottes HVE rapées vinaigrette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CA015$,90222-20260918",
+                  "allergens": [
+                    "MUSTARD",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ0gwNTUkLDkwMjIyLTIwMjYwOTE4",
+                  "label": "Chou rouge vinaigrette",
+                  "description": "Chou rouge vinaigrette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CH055$,90222-20260918",
+                  "allergens": [
+                    "MUSTARD",
+                    "SULFITE",
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAySUwwMDIkLDkwMjIyLTIwMjYwOTE4",
+                  "label": "Ile flottante",
+                  "description": "Ile flottante",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402IL002$,90222-20260918",
+                  "allergens": [
+                    "EGG",
+                    "MILK",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MTg=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260918",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE2MTAsOTAyMjItMjAyNjA5MTg=",
+                  "label": "Crousti' fromage",
+                  "description": "Crousti' fromage",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101610,90222-20260918",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NDIsOTAyMjItMjAyNjA5MTg=",
+                  "label": "Pommes noisettes et ketchup",
+                  "description": "Pommes noisettes et ketchup",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101842,90222-20260918",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    },
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:31.057Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-09-21",
+      "days": [
+        {
+          "date": "2026-09-21",
+          "menus": [
+            {
+              "day": "2026-09-21",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA0MzgsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Clémentine",
+                  "description": "Clémentine",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200438,90222-20260921",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260921",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDAwMDMsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Céréales",
+                  "description": "Céréales",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0100003,90222-20260921",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDEyNzgsOTAyMjItMjAyNjA5MjE=",
+                  "label": "BEIGNET NATURE",
+                  "description": "BEIGNET NATURE",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40201278,90222-20260921",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SOYA"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDI3MzgsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Filet de colin sauce ciboulette",
+                  "description": "Filet de colin sauce ciboulette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40202738,90222-20260921",
+                  "allergens": [
+                    "FISH",
+                    "MILK",
+                    "GLUTEN",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "SUSTAINABLE_FISHING",
+                    "BLUE_WHITE_HEARTH"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDU0NzksOTAyMjItMjAyNjA5MjE=",
+                  "label": "Edam",
+                  "description": "Edam",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40205479,90222-20260921",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyMDU0ODAsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Gouda",
+                  "description": "Gouda",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-40205480,90222-20260921",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQkUwMTgkLDkwMjIyLTIwMjYwOTIx",
+                  "label": "Beignet de framboise",
+                  "description": "Beignet de framboise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402BE018$,90222-20260921",
+                  "allergens": [
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ0EwNDckLDkwMjIyLTIwMjYwOTIx",
+                  "label": "Carottes Bio à la crème",
+                  "description": "Carottes Bio à la crème",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CA047$,90222-20260921",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260921",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NDcsOTAyMjItMjAyNjA5MjE=",
+                  "label": "Filet de poulet roti sauce ciboulette",
+                  "description": "Filet de poulet roti sauce ciboulette",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101847,90222-20260921",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-22",
+          "menus": [
+            {
+              "day": "2026-09-22",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMjEsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Pâte à tartiner choco/noisettes",
+                  "description": "Pâte à tartiner choco/noisettes",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200021,90222-20260922",
+                  "allergens": [
+                    "MILK",
+                    "SOYA",
+                    "FRUIT_SAC"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwNDgsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Jus de raisin",
+                  "description": "Jus de raisin",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200048,90222-20260922",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEyNDcsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Liégeois vanille",
+                  "description": "Liégeois vanille",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101247,90222-20260922",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzNTQsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101354,90222-20260922",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA1MzAsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Pomme bicolore Bio",
+                  "description": "Pomme bicolore Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200530,90222-20260922",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260922",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDExNjMsOTAyMjItMjAyNjA5MjI=",
+                  "label": "Poire Bio",
+                  "description": "Poire Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101163,90222-20260922",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE3MDksOTAyMjItMjAyNjA5MjI=",
+                  "label": "Ravioli ricotta épinard à la crème",
+                  "description": "Ravioli ricotta épinard à la crème",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101709,90222-20260922",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NDksOTAyMjItMjAyNjA5MjI=",
+                  "label": "Crémeux de lentilles",
+                  "description": "Crémeux de lentilles",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101849,90222-20260922",
+                  "allergens": [
+                    "MILK",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-23",
+          "menus": [
+            {
+              "day": "2026-09-23",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAxMTQsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Compote de pomme",
+                  "description": "Compote de pomme",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200114,90222-20260923",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260923",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEyNjksOTAyMjItMjAyNjA5MjM=",
+                  "label": "Confiture de fraise",
+                  "description": "Confiture de fraise",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101269,90222-20260923",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDEzNTYsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Pain de mie",
+                  "description": "Pain de mie",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0101356,90222-20260923",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyRkkwNzUkLDkwMjIyLTIwMjYwOTIz",
+                  "label": "Filet de merlu sauce citron",
+                  "description": "Filet de merlu sauce citron",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402FI075$,90222-20260923",
+                  "allergens": [
+                    "FISH",
+                    "MILK",
+                    "GLUTEN",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "SUSTAINABLE_FISHING",
+                    "BLUE_WHITE_HEARTH"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260923",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA4MDQsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Gratin de chou fleur Bio",
+                  "description": "Gratin de chou fleur Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100804,90222-20260923",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "INFO_NOT_DISCLOSED"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA4MzAsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Yaourt vanille Malo",
+                  "description": "Yaourt vanille Malo",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100830,90222-20260923",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE0MzQsOTAyMjItMjAyNjA5MjM=",
+                  "label": "Cake chocolat",
+                  "description": "Cake chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101434,90222-20260923",
+                  "allergens": [
+                    "EGG",
+                    "MILK",
+                    "GLUTEN",
+                    "SOYA"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-24",
+          "menus": [
+            {
+              "day": "2026-09-24",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwNDgsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Jus de raisin",
+                  "description": "Jus de raisin",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200048,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwNTAsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Gaufrettes vanille",
+                  "description": "Gaufrettes vanille",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200050,90222-20260924",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "SOYA"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDA1NTQsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Berlingot de compote de fraises",
+                  "description": "Berlingot de compote de fraises",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0100554,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ08xMDQkLDkwMjIyLTIwMjYwOTI0",
+                  "label": "Courgettes Bio persillées",
+                  "description": "Courgettes Bio persillées",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CO104$,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE",
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDAyMTEsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Riz Bio pilaf",
+                  "description": "Riz Bio pilaf",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200211,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA1MTEsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Banane Bio",
+                  "description": "Banane Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200511,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtOTAyMDA1MjYsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Orange Bio",
+                  "description": "Orange Bio",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-90200526,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAwODUsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Bûche du Pilat",
+                  "description": "Bûche du Pilat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100085,90222-20260924",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260924",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAyNjMsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Carré de l'est",
+                  "description": "Carré de l'est",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100263,90222-20260924",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMw==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NGVjMzg2M2U1NjkyNjg2YjBhYTExZDYxZWMxYjMwZDQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NTIsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Emincé de boeuf BIO sauce forestière",
+                  "description": "Emincé de boeuf BIO sauce forestière",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101852,90222-20260924",
+                  "allergens": [
+                    "ALLERGEN_FREE",
+                    "GLUTEN",
+                    "SULFITE"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NTMsOTAyMjItMjAyNjA5MjQ=",
+                  "label": "Emincé VG BIO sauce forestière",
+                  "description": "Emincé VG BIO sauce forestière",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101853,90222-20260924",
+                  "allergens": [
+                    "GLUTEN",
+                    "SULFITE",
+                    "SOYA"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        },
+        {
+          "date": "2026-09-25",
+          "menus": [
+            {
+              "day": "2026-09-25",
+              "elements": [
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDAwMjAsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Pain au chocolat",
+                  "description": "Pain au chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200020,90222-20260925",
+                  "allergens": [
+                    "MILK",
+                    "GLUTEN",
+                    "EGG",
+                    "SOYA"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtOTAyMDA3NzMsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Lait 1/2 écrémé",
+                  "description": "Lait 1/2 écrémé",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-90200773,90222-20260925",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAwMDAwMDMtQTAxMDAwMDIsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Poire",
+                  "description": "Poire",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0000003-A0100002,90222-20260925",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6YTVhMzk2MjcyOWY3OTljYzEzMzlmMGRlNzU1NDM2OWQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ1IwMDUkLDkwMjIyLTIwMjYwOTI1",
+                  "label": "Crème dessert chocolat",
+                  "description": "Crème dessert chocolat",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CR005$,90222-20260925",
+                  "allergens": [
+                    "MILK",
+                    "SOYA"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtNDAyQ1IwMzQkLDkwMjIyLTIwMjYwOTI1",
+                  "label": "Crème dessert vanille",
+                  "description": "Crème dessert vanille",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-402CR034$,90222-20260925",
+                  "allergens": [
+                    "MILK"
+                  ],
+                  "certifications": [
+                    "FAIR_TRADE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6N2NjMGRiOWY1ZDExOTNkMzRhNDJjMzEwMzAyMjFmNzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDAxMTgsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Pain",
+                  "description": "Pain",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100118,90222-20260925",
+                  "allergens": [
+                    "GLUTEN"
+                  ],
+                  "certifications": [
+                    "BLUE_WHITE_HEARTH",
+                    "RED_LABEL"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMg==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6ZmRkODE1OTUzZGY5ZGQ1NGQ1NzhhOGY4Zjg0M2U2OTA="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDA2NDcsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Saucisse de toulouse",
+                  "description": "Saucisse de toulouse",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0100647,90222-20260925",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE0MTMsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Haricots coco à la tomate",
+                  "description": "Haricots coco à la tomate",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101413,90222-20260925",
+                  "allergens": [
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE",
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzNA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6NzM4OTlkOGJmMmVhNDVlZTcxNWQwM2Y5YjVkOTRlMzQ="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NTQsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Tomate BIO vinaigrette de l'échalotte",
+                  "description": "Tomate BIO vinaigrette de l'échalotte",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101854,90222-20260925",
+                  "allergens": [
+                    "INFO_NOT_DISCLOSED",
+                    "MUSTARD",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "BIO",
+                    "HVE"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NTUsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Carotte BIO rapées vinaigrette à l'échalotte",
+                  "description": "Carotte BIO rapées vinaigrette à l'échalotte",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101855,90222-20260925",
+                  "allergens": [
+                    "MUSTARD",
+                    "SULFITE",
+                    "ALLERGEN_FREE"
+                  ],
+                  "certifications": [
+                    "HVE",
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUyOQ==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6MmFmMTU3MzYwOWYyZGUwZmUzYjRmYmM0YTA0MmRiOWE="
+                    }
+                  }
+                },
+                {
+                  "id": "TWVudUVsZW1lbnQ6YTAxMzdjZWI5YTdmZTQzNTE4NTBmOTM3ZjQ4ODVjNTgtQTAxMDAwMTctYWEwNDgzOWFiYjU2MzRjNzgxNzlkMDNjYTdmMTRkNzctQTAxMDAwMDUtQTAxMDE4NTYsOTAyMjItMjAyNjA5MjU=",
+                  "label": "Saucisse VG BIO knacki",
+                  "description": "Saucisse VG BIO knacki",
+                  "idElement": "a0137ceb9a7fe4351850f937f4885c58-A0100017-aa04839abb5634c78179d03ca7f14d77-A0100005-A0101856,90222-20260925",
+                  "allergens": [
+                    "GLUTEN",
+                    "EGG"
+                  ],
+                  "certifications": [
+                    "BIO"
+                  ],
+                  "dish": {
+                    "id": "TWVudUVsZW1lbnREaXNoOjUzMA==",
+                    "dishGroup": {
+                      "id": "TWVudUVsZW1lbnREaXNoR3JvdXA6OTNmNTU5MzI0ZDEzMmMzMmRjOTQyM2EyN2M3M2Q4Mzk="
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "available"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    },
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:31.155Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-09-28",
+      "days": [
+        {
+          "date": "2026-09-28",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-09-29",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-09-30",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-01",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-02",
+          "menus": [],
+          "status": "not_returned"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    },
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:31.324Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-10-05",
+      "days": [
+        {
+          "date": "2026-10-05",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-06",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-07",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-08",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-09",
+          "menus": [],
+          "status": "not_returned"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    },
+    {
+      "schemaVersion": 1,
+      "source": "https://api.foodi.fr/graphql",
+      "fetchedAt": "2026-09-09T08:11:31.462Z",
+      "restaurant": {
+        "id": "UG9zOjM4ODg1ODg=",
+        "name": "Menu Scolaire et Centres de Loisirs"
+      },
+      "weekStart": "2026-10-12",
+      "days": [
+        {
+          "date": "2026-10-12",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-13",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-14",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-15",
+          "menus": [],
+          "status": "not_returned"
+        },
+        {
+          "date": "2026-10-16",
+          "menus": [],
+          "status": "not_returned"
+        }
+      ],
+      "delivery": "cache",
+      "stale": false
+    }
+  ]
+}
