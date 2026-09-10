@@ -1,6 +1,6 @@
 # À table — menus scolaires
 
-Application iPhone native SwiftUI et application web pour lire les menus scolaires par ville. Montmagny (95360) est la première ville intégrée ; le client web ajoute Argenteuil (95100). Application indépendante, sans reprise du code, des images ou de la marque Foodi.
+Application iPhone native SwiftUI et application web pour lire les menus scolaires par ville. Montmagny (95360) et Argenteuil (95100) sont intégrées. Application indépendante, sans reprise du code, des images ou de la marque Foodi.
 
 ## Dans cette version
 
@@ -12,12 +12,15 @@ Application iPhone native SwiftUI et application web pour lire les menus scolair
 - Accès au programme de la mairie pour les dates sans menu disponible.
 - Zones de sécurité iOS, Dynamic Type, modes clair/sombre, portrait et paysage. Mode Jour automatique pour les tailles de texte d'accessibilité.
 - Écrans Parents, commentaires par date, compte, signalement et blocage reliés à Supabase dans les builds configurés.
+- Sélection de Montmagny ou Argenteuil dans l'application iPhone. Argenteuil propose les menus maternels ou élémentaires.
 
 ## Application web et Vercel
 
 Le dossier `web/` contient l'application Next.js responsive. Elle lit Montmagny via Foodi et extrait les menus élémentaires ou maternels depuis les PDF officiels d'Argenteuil. Le registre `web/lib/cities.ts` permet d'ajouter une ville avec son connecteur. La tâche Vercel vérifie les sources chaque jour ouvré.
 
 Configurer sur Vercel le dossier racine `web` et les variables `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Ne jamais utiliser la clé `service_role` dans le navigateur. Le domaine acheté chez Amen pourra ensuite être rattaché au projet Vercel par les enregistrements DNS indiqués par Vercel.
+
+L'IPA utilise l'adresse de production Vercel pour récupérer les PDF officiels d'Argenteuil déjà convertis en menus structurés par l'application web.
 
 ## IPA non signé via GitHub
 

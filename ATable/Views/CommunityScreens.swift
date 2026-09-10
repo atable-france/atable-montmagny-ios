@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ParentsScreen: View {
     @EnvironmentObject private var community: CommunityStore
+    @EnvironmentObject private var menus: MenuStore
     private let rooms = [
         ("general", "Entre parents", "Questions, entraide et petites infos du quotidien.", "bubble.left.and.bubble.right"),
         ("menus", "Autour des menus", "Les repas, les découvertes et les retours des enfants.", "fork.knife"),
@@ -12,7 +13,7 @@ struct ParentsScreen: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 22) {
                     Text("Le coin des parents").font(.system(.largeTitle, design: .serif, weight: .bold))
-                    Text("Un espace pour échanger autour de la cantine de Montmagny.").foregroundStyle(.secondary)
+                    Text("Un espace pour échanger autour de la cantine de \(menus.city.name).").foregroundStyle(.secondary)
                     if !community.configured {
                         Label("Ouverture prochaine des échanges", systemImage: "clock")
                             .font(.subheadline.weight(.medium)).foregroundStyle(Palette.green)
@@ -45,6 +46,7 @@ struct ConversationScreen: View {
     let topic: String
     let title: String
     @EnvironmentObject private var community: CommunityStore
+    @EnvironmentObject private var menus: MenuStore
     @State private var messages: [ParentMessage] = []
     @State private var draft = ""
     @State private var loading = false
@@ -101,7 +103,7 @@ struct ConversationScreen: View {
                         Button {
                             guard !sending else { return }; sending = true
                             Task {
-                                do { try await community.post(topic: topic, body: draft); draft = ""; await reload() }
+                                do { try await community.post(topic: topic, body: draft, citySlug: menus.city.rawValue); draft = ""; await reload() }
                                 catch { self.error = error.localizedDescription }
                                 sending = false
                             }
@@ -113,7 +115,7 @@ struct ConversationScreen: View {
             }
         }
         .background(Palette.background).navigationTitle(title).navigationBarTitleDisplayMode(.inline)
-        .task(id: community.userID) { if community.signedIn { await reload() } }
+        .task(id: "\(community.userID?.uuidString ?? "guest")-\(menus.city.rawValue)") { if community.signedIn { await reload() } }
         .sheet(isPresented: $showAuth) { AuthScreen() }
         .alert("Information", isPresented: Binding(get: { error != nil }, set: { if !$0 { error = nil } })) { Button("OK") { error = nil } } message: { Text(error ?? "") }
         .confirmationDialog("Signaler ce message à la modération ?", isPresented: Binding(get: { pendingReport != nil }, set: { if !$0 { pendingReport = nil } })) {
@@ -125,7 +127,7 @@ struct ConversationScreen: View {
     }
     private func reload() async {
         loading = true
-        do { messages = try await community.messages(topic: topic) } catch { self.error = error.localizedDescription }
+        do { messages = try await community.messages(topic: topic, citySlug: menus.city.rawValue) } catch { self.error = error.localizedDescription }
         loading = false
     }
     private func perform(_ operation: () async throws -> Void) async {
@@ -182,6 +184,7 @@ struct AuthScreen: View {
 
 struct ProfileScreen: View {
     @EnvironmentObject private var community: CommunityStore
+    @EnvironmentObject private var menus: MenuStore
     @AppStorage("showSnack") private var showSnack = true
     @AppStorage("appearance") private var appearance = "system"
     @State private var showAuth = false
@@ -214,13 +217,20 @@ struct ProfileScreen: View {
                     NavigationLink("Comprendre les couleurs") { LegendSheet() }
                 }
                 Section("Ma cantine") {
-                    LabeledContent("Ville", value: "Montmagny · 95360")
-                    Text("Menus scolaires et centres de loisirs").foregroundStyle(.secondary)
-                    Link("Programme de la mairie", destination: FoodiService.municipalURL)
+                    Picker("Ville", selection: Binding(get: { menus.city }, set: { menus.selectCity($0) })) {
+                        ForEach(CanteenCity.allCases) { Text("\($0.name) · \($0.postalCode)").tag($0) }
+                    }
+                    if menus.city.supportsNursery {
+                        Picker("Établissement", selection: Binding(get: { menus.schoolLevel }, set: { menus.selectSchoolLevel($0) })) {
+                            ForEach(SchoolLevel.allCases) { Text($0.label).tag($0) }
+                        }
+                    }
+                    Text("Menus scolaires de \(menus.city.name)").foregroundStyle(.secondary)
+                    Link("Programme de la mairie", destination: menus.city.municipalURL)
                 }
                 Section("À propos") {
-                    Text("À table est une application indépendante de lecture des menus de Montmagny. Les menus proviennent de Foodi ; les prévisions complémentaires sont publiées par la mairie.").font(.footnote)
-                    Text("Version 0.1 · Première version iPhone").font(.caption).foregroundStyle(.secondary)
+                    Text("À table est une application indépendante de lecture des menus scolaires. Les données proviennent de Foodi ou des publications officielles des villes.").font(.footnote)
+                    Text("Version 0.2 · Montmagny et Argenteuil").font(.caption).foregroundStyle(.secondary)
                 }
                 if community.signedIn {
                     Section {

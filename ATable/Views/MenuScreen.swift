@@ -21,6 +21,7 @@ struct MenuScreen: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 22) {
                         masthead
+                        citySelector
                         weekNavigation
                         Picker("Affichage des menus", selection: $mode) {
                             Text("Semaine").tag(0)
@@ -48,7 +49,7 @@ struct MenuScreen: View {
                 .refreshable { await store.load(force: true) }
             }
             .toolbar(.hidden, for: .navigationBar)
-            .task(id: MenuDate.key(store.monday)) {
+            .task(id: "\(store.city.rawValue)-\(store.schoolLevel.rawValue)-\(MenuDate.key(store.monday))") {
                 if !dates.contains(selectedDate) { selectedDate = dates[0] }
                 await store.load()
             }
@@ -60,12 +61,42 @@ struct MenuScreen: View {
     private var masthead: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 5) {
-                Text("MONTMAGNY · 95360").font(.caption.weight(.semibold)).tracking(1.8).foregroundStyle(Palette.green)
+                Text("\(store.city.name.uppercased()) · \(store.city.postalCode)").font(.caption.weight(.semibold)).tracking(1.8).foregroundStyle(Palette.green)
                 Text("À table.").font(.system(size: 40, weight: .bold, design: .serif)).accessibilityIdentifier("appTitle")
                 Text("Les menus, en un coup d’œil.").font(.subheadline).foregroundStyle(.secondary)
             }
             Spacer(minLength: 8)
             Image(systemName: "fork.knife.circle.fill").font(.system(size: 48)).foregroundStyle(Palette.green).accessibilityHidden(true)
+        }
+    }
+
+    private var citySelector: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Menu {
+                ForEach(CanteenCity.allCases) { city in
+                    Button {
+                        store.selectCity(city)
+                    } label: {
+                        if city == store.city { Label("\(city.name) · \(city.postalCode)", systemImage: "checkmark") }
+                        else { Text("\(city.name) · \(city.postalCode)") }
+                    }
+                }
+            } label: {
+                HStack(spacing: 12) {
+                    Image(systemName: "mappin.and.ellipse").foregroundStyle(Palette.green)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Ma ville").font(.caption).foregroundStyle(.secondary)
+                        Text("\(store.city.name) · \(store.city.postalCode)").font(.headline).foregroundStyle(.primary)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.up.chevron.down").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                }.padding(15).background(Palette.card, in: RoundedRectangle(cornerRadius: 18))
+            }.accessibilityIdentifier("citySelector")
+            if store.city.supportsNursery {
+                Picker("Établissement", selection: Binding(get: { store.schoolLevel }, set: { store.selectSchoolLevel($0) })) {
+                    ForEach(SchoolLevel.allCases) { Text($0.label).tag($0) }
+                }.pickerStyle(.segmented).accessibilityIdentifier("schoolLevel")
+            }
         }
     }
 
@@ -220,12 +251,12 @@ struct MenuScreen: View {
             }.buttonStyle(.bordered).tint(Palette.green)
         } else {
             ContentUnavailableView("Menu non disponible", systemImage: "calendar.badge.clock", description: Text("Aucun plat n’est retourné pour cette journée."))
-            Link("Consulter le programme de la mairie", destination: FoodiService.municipalURL)
+            Link("Consulter le programme de la mairie", destination: store.city.municipalURL)
         }
     }
     private var sourceStatus: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label(store.stale ? "Copie enregistrée" : "Menus Foodi", systemImage: store.stale ? "clock.arrow.circlepath" : "checkmark.circle")
+            Label(store.stale ? "Copie enregistrée" : "Menus à jour", systemImage: store.stale ? "clock.arrow.circlepath" : "checkmark.circle")
                 .font(.caption.weight(.semibold)).foregroundStyle(store.stale ? Palette.amber : Palette.green)
             if let text = store.message { Text(text).font(.caption).foregroundStyle(.secondary) }
             if let timestamp = store.week?.fetchedAt {
@@ -239,8 +270,8 @@ struct MenuScreen: View {
     }
     private var emptyWeek: some View {
         VStack(spacing: 20) {
-            ContentUnavailableView("Les menus se préparent", systemImage: "calendar.badge.clock", description: Text(store.message ?? "Foodi ne retourne pas encore de menu pour cette semaine. Le programme prévisionnel peut être disponible à la mairie."))
-            Link(destination: FoodiService.municipalURL) {
+            ContentUnavailableView("Les menus se préparent", systemImage: "calendar.badge.clock", description: Text(store.message ?? "Aucun menu n’est encore publié pour cette semaine. Le programme prévisionnel peut être disponible à la mairie."))
+            Link(destination: store.city.municipalURL) {
                 Label("Voir le programme de la mairie", systemImage: "doc.text").frame(maxWidth: .infinity).padding(12)
             }.buttonStyle(.borderedProminent)
             Button("Réessayer") { Task { await store.load(force: true) } }.disabled(store.loading)

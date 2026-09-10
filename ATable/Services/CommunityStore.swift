@@ -5,10 +5,11 @@ import SwiftUI
 struct BackendConfig: Decodable {
     let url: String
     let publishableKey: String
+    let menuAPIURL: String?
     static var current: Self {
         guard let path = Bundle.main.url(forResource: "Backend", withExtension: "json"),
               let data = try? Data(contentsOf: path), let config = try? JSONDecoder().decode(Self.self, from: data) else {
-            return Self(url: "", publishableKey: "")
+            return Self(url: "", publishableKey: "", menuAPIURL: nil)
         }
         return config
     }
@@ -120,15 +121,16 @@ final class CommunityStore: ObservableObject {
         _ = try await request("/rest/v1/rpc/delete_my_account", method: "POST", body: [:], authenticated: true)
         session = nil; SessionKeychain.clear()
     }
-    func messages(topic: String) async throws -> [ParentMessage] {
+    func messages(topic: String, citySlug: String) async throws -> [ParentMessage] {
         let encoded = topic.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let data = try await request("/rest/v1/messages?select=id,user_id,topic,body,created_at,profiles(nickname)&topic=eq.\(encoded)&order=created_at.desc&limit=100", authenticated: true)
+        let city = citySlug.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let data = try await request("/rest/v1/messages?select=id,user_id,topic,body,created_at,profiles(nickname)&city_slug=eq.\(city)&topic=eq.\(encoded)&order=created_at.desc&limit=100", authenticated: true)
         return try JSONDecoder().decode([ParentMessage].self, from: data).reversed()
     }
-    func post(topic: String, body: String) async throws {
+    func post(topic: String, body: String, citySlug: String) async throws {
         let text = body.trimmingCharacters(in: .whitespacesAndNewlines)
         guard (1...2000).contains(text.count), let userID else { throw CommunityError(message: "Écrivez un message de 1 à 2 000 caractères.") }
-        _ = try await request("/rest/v1/messages", method: "POST", body: ["user_id": userID.uuidString, "topic": topic, "body": text], authenticated: true)
+        _ = try await request("/rest/v1/messages", method: "POST", body: ["user_id": userID.uuidString, "topic": topic, "body": text, "city_slug": citySlug], authenticated: true)
     }
     func deleteMessage(_ message: ParentMessage) async throws {
         _ = try await request("/rest/v1/messages?id=eq.\(message.id.uuidString)", method: "DELETE", authenticated: true)

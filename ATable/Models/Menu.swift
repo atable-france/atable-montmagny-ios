@@ -39,6 +39,7 @@ struct MenuItem: Codable, Identifiable, Hashable {
     let allergens: [String]
     let certifications: [String]
     let dish: DishRef?
+    let reportedDiet: Diet?
 
     var group: MealGroup {
         guard let id = dish?.id, let data = Data(base64Encoded: id), let text = String(data: data, encoding: .utf8),
@@ -49,7 +50,27 @@ struct MenuItem: Codable, Identifiable, Hashable {
         let value = label.replacingOccurrences(of: "/*", with: "").trimmingCharacters(in: CharacterSet(charactersIn: " *"))
         return value == value.uppercased() ? value.lowercased().prefix(1).uppercased() + value.lowercased().dropFirst() : value
     }
-    var diet: Diet { Diet.classify(label) }
+    var diet: Diet { reportedDiet ?? Diet.classify(label) }
+}
+
+enum CanteenCity: String, CaseIterable, Identifiable {
+    case montmagny, argenteuil
+    var id: String { rawValue }
+    var name: String { self == .montmagny ? "Montmagny" : "Argenteuil" }
+    var postalCode: String { self == .montmagny ? "95360" : "95100" }
+    var supportsNursery: Bool { self == .argenteuil }
+    var municipalURL: URL {
+        switch self {
+        case .montmagny: URL(string: "https://www.villedemontmagny.fr/enfance/le-periscolaire/la-restauration-scolaire/")!
+        case .argenteuil: URL(string: "https://www.argenteuil.fr/fr/restauration-scolaire")!
+        }
+    }
+}
+
+enum SchoolLevel: String, CaseIterable, Identifiable {
+    case elementary, nursery
+    var id: String { rawValue }
+    var label: String { self == .elementary ? "Élémentaire" : "Maternelle" }
 }
 
 enum MealGroup: Int, CaseIterable, Identifiable {
@@ -128,8 +149,8 @@ struct WeekMenu: Codable {
     let restaurant: RestaurantRef
     let days: [MenuDay]
     var hasFood: Bool { days.contains { !$0.elements.isEmpty } }
-    func validate(for dates: [String]) throws {
-        guard restaurant.id == FoodiService.posID, days.map(\.date) == dates else { throw FoodiError.invalidData }
+    func validate(for dates: [String], restaurantID: String = FoodiService.posID) throws {
+        guard restaurant.id == restaurantID, days.map(\.date) == dates else { throw FoodiError.invalidData }
         guard days.allSatisfy({ day in day.menus.allSatisfy { $0.day == day.date } }) else { throw FoodiError.invalidData }
     }
 }

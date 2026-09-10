@@ -47,6 +47,63 @@ struct FoodiService {
     }
 }
 
+private struct WebMenuItem: Decodable {
+    let id: String
+    let label: String
+    let group: String
+    let diet: Diet
+
+    var native: MenuItem {
+        let mapped: MealGroup
+        switch group {
+        case "starter": mapped = .starter
+        case "main": mapped = .main
+        case "side": mapped = .side
+        case "dairy": mapped = .dairy
+        case "dessert": mapped = .dessert
+        default: mapped = .other
+        }
+        let encoded = Data("MenuElementDish:\(mapped.rawValue)".utf8).base64EncodedString()
+        return MenuItem(id: id, label: label, description: nil, allergens: [], certifications: [], dish: DishRef(id: encoded, dishGroup: nil), reportedDiet: diet)
+    }
+}
+private struct WebMenuDay: Decodable { let date: String; let items: [WebMenuItem] }
+private struct WebWeekMenu: Decodable {
+    let city: String
+    let cityName: String
+    let weekStart: String
+    let fetchedAt: String
+    let days: [WebMenuDay]
+
+    var native: WeekMenu {
+        WeekMenu(weekStart: weekStart, fetchedAt: fetchedAt, restaurant: RestaurantRef(id: city, name: cityName),
+                 days: days.map { MenuDay(date: $0.date, menus: [DailyMenu(day: $0.date, elements: $0.items.map(\.native))]) })
+    }
+}
+
+struct CityMenuService {
+    private let config = BackendConfig.current
+    func fetch(city: CanteenCity, level: SchoolLevel, monday: Date) async throws -> WeekMenu {
+        if city == .montmagny { return try await FoodiService().fetch(monday: monday) }
+        let configuredBase = config.menuAPIURL?.trimmingCharacters(in: CharacterSet(charactersIn: "/")) ?? ""
+        let base = configuredBase.isEmpty ? "https://atable-montmagny-ios.vercel.app" : configuredBase
+        guard var components = URLComponents(string: base + "/api/menus") else { throw FoodiError.api("Web") }
+        components.queryItems = [
+            URLQueryItem(name: "city", value: city.rawValue),
+            URLQueryItem(name: "week", value: MenuDate.key(monday)),
+            URLQueryItem(name: "level", value: level.rawValue)
+        ]
+        guard let url = components.url else { throw FoodiError.invalidData }
+        let (data, response) = try await URLSession.shared.data(from: url)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
+            throw FoodiError.server((response as? HTTPURLResponse)?.statusCode ?? 0)
+        }
+        let value = try JSONDecoder().decode(WebWeekMenu.self, from: data).native
+        try value.validate(for: MenuDate.weekDates(monday), restaurantID: city.rawValue)
+        return value
+    }
+}
+
 @MainActor
 final class MenuStore: ObservableObject {
     @Published var monday = MenuDate.monday(MenuDate.today)
@@ -54,21 +111,43 @@ final class MenuStore: ObservableObject {
     @Published var loading = false
     @Published var stale = false
     @Published var message: String?
+    @Published private(set) var city: CanteenCity
+    @Published private(set) var schoolLevel: SchoolLevel
     private var generation = 0
-    private let service = FoodiService()
+    private let service = CityMenuService()
+
+    init() {
+        city = CanteenCity(rawValue: UserDefaults.standard.string(forKey: "citySlug") ?? "") ?? .montmagny
+        schoolLevel = SchoolLevel(rawValue: UserDefaults.standard.string(forKey: "schoolLevel") ?? "") ?? .elementary
+    }
+
+    func selectCity(_ value: CanteenCity) {
+        guard city != value else { return }
+        city = value
+        if !value.supportsNursery { schoolLevel = .elementary }
+        UserDefaults.standard.set(city.rawValue, forKey: "citySlug")
+        UserDefaults.standard.set(schoolLevel.rawValue, forKey: "schoolLevel")
+        week = nil; message = nil; generation += 1
+    }
+    func selectSchoolLevel(_ value: SchoolLevel) {
+        guard schoolLevel != value else { return }
+        schoolLevel = value
+        UserDefaults.standard.set(value.rawValue, forKey: "schoolLevel")
+        week = nil; message = nil; generation += 1
+    }
 
     func move(_ offset: Int) { monday = MenuDate.add(offset * 7, to: monday) }
     func currentWeek() { monday = MenuDate.monday(MenuDate.today) }
     private func file(for key: String) -> URL? {
         let root = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        let directory = root.appendingPathComponent("MontmagnyMenus", isDirectory: true)
+        let directory = root.appendingPathComponent("Menus-\(city.rawValue)-\(schoolLevel.rawValue)", isDirectory: true)
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         return directory.appendingPathComponent(key + ".json")
     }
     private func cached(_ key: String) -> WeekMenu? {
         if let url = file(for: key), let data = try? Data(contentsOf: url), let value = try? JSONDecoder().decode(WeekMenu.self, from: data),
-           (try? value.validate(for: MenuDate.weekDates(monday))) != nil { return value }
-        if let url = Bundle.main.url(forResource: "menus-seed", withExtension: "json"),
+           (try? value.validate(for: MenuDate.weekDates(monday), restaurantID: city == .montmagny ? FoodiService.posID : city.rawValue)) != nil { return value }
+        if city == .montmagny, let url = Bundle.main.url(forResource: "menus-seed", withExtension: "json"),
            let data = try? Data(contentsOf: url), let seed = try? JSONDecoder().decode(MenuSeed.self, from: data),
            let value = seed.weeks.first(where: { $0.weekStart == key }),
            (try? value.validate(for: MenuDate.weekDates(monday))) != nil { return value }
@@ -90,7 +169,8 @@ final class MenuStore: ObservableObject {
         }
         loading = true
         do {
-            let fresh = try await service.fetch(monday: requestedMonday)
+            let requestedCity = city, requestedLevel = schoolLevel
+            let fresh = try await service.fetch(city: requestedCity, level: requestedLevel, monday: requestedMonday)
             guard generation == requestID, !Task.isCancelled else { return }
             week = fresh; stale = false
             if let path = file(for: key), let data = try? JSONEncoder().encode(fresh) { try? data.write(to: path, options: .atomic) }
