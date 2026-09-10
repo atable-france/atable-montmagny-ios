@@ -8,6 +8,14 @@ import type { MenuDay, WeekMenu } from "@/lib/types";
 
 type Tab = "menus" | "parents" | "account";
 type Message = { id: string; body: string; created_at: string; user_id: string; profiles: { nickname: string } | null };
+type CityLookup = {
+  supported: boolean;
+  commune: { name: string; postalCode: string } | null;
+  city: { slug: string; name: string; postalCode: string } | null;
+  suggestions?: string[];
+  error?: string;
+  warning?: string;
+};
 
 const db = supabase();
 const labels: Record<string, string> = { starter: "Entrée", main: "Plat", side: "Accompagnement", dairy: "Laitage", dessert: "Dessert", other: "Au menu" };
@@ -33,12 +41,78 @@ function DayCard({ day }: { day: MenuDay }) {
   </article>;
 }
 
+function CityFinder({ city, onSelect, onUnavailable }: { city: string; onSelect: (city: string) => void; onUnavailable: (name: string | null) => void }) {
+  const selected = cities.find((item) => item.slug === city)!;
+  const [name, setName] = useState(selected.name);
+  const [postalCode, setPostalCode] = useState(selected.postalCode);
+  const [notice, setNotice] = useState("");
+  const [noticeKind, setNoticeKind] = useState<"success" | "info" | "error">("info");
+  const [searching, setSearching] = useState(false);
+
+  useEffect(() => {
+    setName(selected.name);
+    setPostalCode(selected.postalCode);
+  }, [selected.name, selected.postalCode]);
+
+  async function locate(event: FormEvent) {
+    event.preventDefault();
+    setSearching(true);
+    setNotice("");
+    try {
+      const params = new URLSearchParams({ name: name.trim(), postalCode: postalCode.trim() });
+      const response = await fetch(`/api/cities/lookup?${params}`);
+      const result = await response.json() as CityLookup;
+      if (!response.ok) throw new Error(result.error ?? "La commune n’a pas pu être vérifiée.");
+      if (result.city) {
+        onUnavailable(null);
+        onSelect(result.city.slug);
+        setName(result.city.name);
+        setPostalCode(result.city.postalCode);
+        setNoticeKind("success");
+        setNotice(`Menus trouvés pour ${result.city.name}.`);
+      } else if (result.commune) {
+        onUnavailable(result.commune.name);
+        setName(result.commune.name);
+        setNoticeKind("info");
+        setNotice(`${result.commune.name} est reconnue, mais sa source de menus n’est pas encore intégrée. Nous devons vérifier le service de la mairie ou son fournisseur.`);
+      } else {
+        setNoticeKind("error");
+        const hint = result.suggestions?.length ? ` Essayez : ${result.suggestions.join(", ")}.` : "";
+        setNotice(`${result.error ?? "Cette commune n’a pas été reconnue."}${hint}`);
+      }
+    } catch (reason) {
+      setNoticeKind("error");
+      setNotice(reason instanceof Error ? reason.message : "La recherche est indisponible.");
+    } finally {
+      setSearching(false);
+    }
+  }
+
+  function chooseSupported(slug: string) {
+    onUnavailable(null);
+    onSelect(slug);
+    setNotice("");
+  }
+
+  return <section className="location-panel panel">
+    <form className="city-search" onSubmit={locate}>
+      <label>Ma ville<input value={name} onChange={(event) => setName(event.target.value)} list="supported-cities" autoComplete="address-level2" placeholder="Ex. Montmagny" required /></label>
+      <datalist id="supported-cities">{cities.map((item) => <option value={item.name} key={item.slug} />)}</datalist>
+      <label>Code postal<input value={postalCode} onChange={(event) => setPostalCode(event.target.value.replace(/\D/g, "").slice(0, 5))} autoComplete="postal-code" inputMode="numeric" pattern="[0-9]{5}" placeholder="Ex. 95360" required /></label>
+      <button className="primary" disabled={searching}>{searching ? "Recherche…" : "Trouver mes menus"}</button>
+    </form>
+    <div className="city-shortcuts" aria-label="Villes déjà disponibles">{cities.map((item) => <button className={item.slug === city ? "selected" : ""} onClick={() => chooseSupported(item.slug)} type="button" key={item.slug}>{item.name} · {item.postalCode}</button>)}</div>
+    {notice && <p className={`location-notice ${noticeKind}`} aria-live="polite">{notice}</p>}
+  </section>;
+}
+
 function Menus({ city, setCity }: { city: string; setCity: (city: string) => void }) {
   const [week, setWeek] = useState(mondayOf());
   const [level, setLevel] = useState<"elementary" | "nursery">("elementary");
   const [menu, setMenu] = useState<WeekMenu | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [unavailableCity, setUnavailableCity] = useState<string | null>(null);
   useEffect(() => {
     let alive = true;
     setLoading(true); setError("");
@@ -56,16 +130,15 @@ function Menus({ city, setCity }: { city: string; setCity: (city: string) => voi
       <h1>Qu’est-ce qu’on mange<br /><span>à la cantine&nbsp;?</span></h1>
       <p>Un affichage simple, pensé pour être parcouru avec les enfants.</p>
     </section>
-    <section className="controls panel">
-      <label>Ma ville<select value={city} onChange={(event) => setCity(event.target.value)}>{cities.map((item) => <option value={item.slug} key={item.slug}>{item.name} · {item.postalCode}</option>)}</select></label>
-      {selected.source.kind === "argenteuil-pdf" && <label>École<select value={level} onChange={(event) => setLevel(event.target.value as typeof level)}><option value="elementary">Élémentaire</option><option value="nursery">Maternelle</option></select></label>}
-    </section>
+    <CityFinder city={city} onSelect={setCity} onUnavailable={setUnavailableCity} />
+    {unavailableCity ? <div className="status panel">Aucun menu n’est encore disponible pour {unavailableCity}. Sa source officielle doit d’abord être ajoutée.</div> : <>
+    {selected.source.kind === "argenteuil-pdf" && <section className="school-level panel"><label>École<select value={level} onChange={(event) => setLevel(event.target.value as typeof level)}><option value="elementary">Élémentaire</option><option value="nursery">Maternelle</option></select></label></section>}
     <nav className="week-nav panel" aria-label="Changer de semaine"><button onClick={() => setWeek(addDays(week, -7))}>←</button><div><small>Semaine</small><strong>{dateLabel(week)} — {dateLabel(addDays(week, 4))}</strong></div><button onClick={() => setWeek(addDays(week, 7))}>→</button></nav>
     <div className="legend"><span><i className="red" /> Viande</span><span><i className="green" /> Végétarien ou poisson</span></div>
     {loading ? <div className="status">Les menus arrivent…</div> : error ? <div className="status error">{error}</div> : <>
       <section className="week-grid">{menu?.days.map((day) => <DayCard day={day} key={day.date} />)}</section>
       <p className="source">Source&nbsp;: <a href={menu?.sourceUrl} target="_blank">{menu?.sourceName}</a> · mise à jour {menu && new Date(menu.fetchedAt).toLocaleString("fr-FR")}</p>
-    </>}
+    </>}</>}
   </main>;
 }
 

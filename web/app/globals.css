@@ -21,6 +21,19 @@ h1 span { color:var(--green); font-style:italic; }
 .hero>p:last-child { color:var(--muted); max-width:540px; font-size:1.04rem; }
 .panel { background:rgba(255,253,248,.88); border:1px solid var(--line); border-radius:24px; box-shadow:0 12px 42px rgba(42,55,46,.06); }
 .controls { display:flex; gap:20px; padding:18px 20px; margin-bottom:16px; }
+.location-panel { padding:18px 20px; margin-bottom:16px; }
+.city-search { display:grid; grid-template-columns:minmax(180px,1fr) minmax(135px,.42fr) auto; gap:14px; align-items:end; }
+.city-search .primary { min-height:45px; }
+.city-search .primary:disabled { cursor:progress; opacity:.68; }
+.city-shortcuts { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.city-shortcuts button { border:1px solid var(--line); border-radius:999px; padding:7px 11px; color:var(--muted); background:white; cursor:pointer; font-size:.76rem; }
+.city-shortcuts button.selected { color:var(--green); border-color:var(--green); background:var(--green-soft); font-weight:700; }
+.location-notice { margin:14px 2px 0; padding:11px 13px; border-radius:12px; font-size:.82rem; line-height:1.45; }
+.location-notice.success { color:var(--green); background:var(--green-soft); }
+.location-notice.info { color:var(--ink); background:#f5ead3; }
+.location-notice.error { color:var(--red); background:var(--red-soft); }
+.school-level { width:min(360px,100%); padding:14px 18px; margin:0 0 16px auto; }
+.school-level select { min-width:220px; }
 label { display:grid; gap:7px; font-size:.78rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
 select,input,textarea { color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 13px; outline:none; text-transform:none; letter-spacing:0; }
 select:focus,input:focus,textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(36,92,72,.12); }
@@ -51,5 +64,6 @@ select:focus,input:focus,textarea:focus { border-color:var(--green); box-shadow:
 .settings { max-width:620px; padding:24px; }.settings>div { display:flex; align-items:center; justify-content:space-between; padding:17px 0; border-bottom:1px solid var(--line); }.settings span { display:grid; gap:3px; }.settings small { color:var(--muted); }.settings div button { border:1px solid var(--green); color:var(--green); background:white; border-radius:12px; padding:8px 12px; font-weight:700; }
 .inbox { margin-top:20px; padding-top:14px; border-top:1px solid var(--line); }.inbox h3 { font:600 1.25rem "Fraunces",serif; }.inbox article { padding:12px 0; border-bottom:1px solid var(--line); }.inbox article p { margin:5px 0; color:var(--muted); }
 @media (max-width:900px) { .week-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.week-grid .day-card:last-child { grid-column:1/-1; } }
-@media (max-width:560px) { main { padding:34px 16px 28px; }.top { height:62px; padding:0 16px; }.controls { display:grid; }.week-grid { display:grid; grid-template-columns:1fr; }.week-grid .day-card:last-child { grid-column:auto; }.day-card { min-height:auto; }.bottom { width:calc(100% - 24px); justify-content:space-around; bottom:10px; }.bottom button { flex:1; padding:8px 6px; }.legend { flex-wrap:wrap; }.conversation form { grid-template-columns:1fr; } }
+@media (max-width:700px) { .city-search { grid-template-columns:1fr 1fr; }.city-search .primary { grid-column:1/-1; } }
+@media (max-width:560px) { main { padding:34px 16px 28px; }.top { height:62px; padding:0 16px; }.controls,.city-search { display:grid; grid-template-columns:1fr; }.city-search .primary { grid-column:auto; }.school-level { margin-left:0; }.week-grid { display:grid; grid-template-columns:1fr; }.week-grid .day-card:last-child { grid-column:auto; }.day-card { min-height:auto; }.bottom { width:calc(100% - 24px); justify-content:space-around; bottom:10px; }.bottom button { flex:1; padding:8px 6px; }.legend { flex-wrap:wrap; }.conversation form { grid-template-columns:1fr; } }
 @media (prefers-reduced-motion:no-preference) { .day-card { animation:rise .45s both; }.day-card:nth-child(2){animation-delay:.04s}.day-card:nth-child(3){animation-delay:.08s}.day-card:nth-child(4){animation-delay:.12s}.day-card:nth-child(5){animation-delay:.16s}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}} }

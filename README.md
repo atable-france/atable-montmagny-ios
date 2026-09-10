@@ -16,7 +16,9 @@ Application iPhone native SwiftUI et application web pour lire les menus scolair
 
 ## Application web et Vercel
 
-Le dossier `web/` contient l'application Next.js responsive. Elle lit Montmagny via Foodi et extrait les menus élémentaires ou maternels depuis les PDF officiels d'Argenteuil. Le registre `web/lib/cities.ts` permet d'ajouter une ville avec son connecteur. La tâche Vercel vérifie les sources chaque jour ouvré.
+Le dossier `web/` contient l'application Next.js responsive. La personne saisit sa ville et son code postal ; la commune est vérifiée avec l'API officielle `geo.api.gouv.fr`. Si un connecteur de menus est enregistré, la bonne ville est sélectionnée automatiquement. Elle lit actuellement Montmagny via Foodi et extrait les menus élémentaires ou maternels depuis les PDF officiels d'Argenteuil.
+
+Il n'existe pas de base nationale uniforme des menus scolaires. Chaque nouvelle commune doit donc être reliée une fois à sa source officielle (API du prestataire, page de mairie ou PDF) dans `web/lib/cities.ts`. Une commune française reconnue mais pas encore reliée est signalée clairement, sans afficher le menu d'une autre ville. La tâche Vercel vérifie les sources déjà intégrées chaque jour ouvré.
 
 Configurer sur Vercel le dossier racine `web` et les variables `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Ne jamais utiliser la clé `service_role` dans le navigateur. Le domaine acheté chez Amen pourra ensuite être rattaché au projet Vercel par les enregistrements DNS indiqués par Vercel.
 
