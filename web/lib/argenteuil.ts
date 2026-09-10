@@ -51,6 +51,7 @@ async function parsePdf(buffer: ArrayBuffer) {
   globals.ImageData ??= canvas.ImageData;
   globals.Path2D ??= canvas.Path2D;
   const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
+  globals.pdfjsWorker ??= await import("pdfjs-dist/legacy/build/pdf.worker.mjs");
   const pdf = await getDocument({ data: new Uint8Array(buffer), useWorkerFetch: false }).promise;
   const parsed = new Map<string, MenuItem[]>();
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
