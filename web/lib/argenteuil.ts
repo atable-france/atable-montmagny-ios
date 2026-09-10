@@ -1,5 +1,4 @@
 import { createHash } from "node:crypto";
-import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { classifyDiet } from "./diet";
 import { weekDates } from "./date";
 import type { City } from "./cities";
@@ -46,6 +45,12 @@ function inferGroup(label: string, index: number, total: number): MenuItem["grou
 }
 
 async function parsePdf(buffer: ArrayBuffer) {
+  const canvas = await import("@napi-rs/canvas");
+  const globals = globalThis as unknown as Record<string, unknown>;
+  globals.DOMMatrix ??= canvas.DOMMatrix;
+  globals.ImageData ??= canvas.ImageData;
+  globals.Path2D ??= canvas.Path2D;
+  const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
   const pdf = await getDocument({ data: new Uint8Array(buffer), useWorkerFetch: false }).promise;
   const parsed = new Map<string, MenuItem[]>();
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
