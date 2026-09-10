@@ -86,7 +86,7 @@ struct CityMenuService {
     func fetch(city: CanteenCity, level: SchoolLevel, monday: Date) async throws -> WeekMenu {
         if city == .montmagny { return try await FoodiService().fetch(monday: monday) }
         let configuredBase = config.menuAPIURL?.trimmingCharacters(in: CharacterSet(charactersIn: "/")) ?? ""
-        let base = configuredBase.isEmpty ? "https://atable-montmagny-ios.vercel.app" : configuredBase
+        let base = configuredBase.isEmpty ? "https://www.mafabuleusecantine.com" : configuredBase
         guard var components = URLComponents(string: base + "/api/menus") else { throw FoodiError.api("Web") }
         components.queryItems = [
             URLQueryItem(name: "city", value: city.rawValue),
