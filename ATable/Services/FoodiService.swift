@@ -102,7 +102,32 @@ struct CityMenuService {
         try value.validate(for: MenuDate.weekDates(monday), restaurantID: city.rawValue)
         return value
     }
+
+    func lookup(name: String, postalCode: String) async throws -> [CanteenCity] {
+        let configuredBase = config.menuAPIURL?.trimmingCharacters(in: CharacterSet(charactersIn: "/")) ?? ""
+        let base = configuredBase.isEmpty ? "https://www.mafabuleusecantine.com" : configuredBase
+        guard var components = URLComponents(string: base + "/api/cities/lookup") else { throw FoodiError.api("Web") }
+        components.queryItems = [URLQueryItem(name: "name", value: name), URLQueryItem(name: "postalCode", value: postalCode)]
+        guard let url = components.url else { throw FoodiError.invalidData }
+        let (data, response) = try await URLSession.shared.data(from: url)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200 else { throw FoodiError.server((response as? HTTPURLResponse)?.statusCode ?? 0) }
+        let result = try JSONDecoder().decode(CityLookupResponse.self, from: data)
+        return result.candidates.compactMap(\.native)
+    }
 }
+
+private struct CityLookupResponse: Decodable { let candidates: [CityLookupCandidate] }
+private struct CityLookupCandidate: Decodable {
+    let slug: String
+    let name: String
+    let postalCode: String
+    let source: CityLookupSource
+    var native: CanteenCity? {
+        guard let url = URL(string: source.municipalUrl) else { return nil }
+        return CanteenCity(rawValue: slug, name: name, postalCode: postalCode, supportsNursery: slug == "argenteuil", municipalURL: url)
+    }
+}
+private struct CityLookupSource: Decodable { let municipalUrl: String }
 
 @MainActor
 final class MenuStore: ObservableObject {
@@ -116,8 +141,13 @@ final class MenuStore: ObservableObject {
     private var generation = 0
     private let service = CityMenuService()
 
+    var availableCities: [CanteenCity] {
+        CanteenCity.allCases.contains(city) ? CanteenCity.allCases : CanteenCity.allCases + [city]
+    }
+
     init() {
-        city = CanteenCity(rawValue: UserDefaults.standard.string(forKey: "citySlug") ?? "") ?? .montmagny
+        if let data = UserDefaults.standard.data(forKey: "selectedCity"), let saved = try? JSONDecoder().decode(CanteenCity.self, from: data) { city = saved }
+        else { city = CanteenCity(rawValue: UserDefaults.standard.string(forKey: "citySlug") ?? "") ?? .montmagny }
         schoolLevel = SchoolLevel(rawValue: UserDefaults.standard.string(forKey: "schoolLevel") ?? "") ?? .elementary
     }
 
@@ -126,8 +156,14 @@ final class MenuStore: ObservableObject {
         city = value
         if !value.supportsNursery { schoolLevel = .elementary }
         UserDefaults.standard.set(city.rawValue, forKey: "citySlug")
+        if let data = try? JSONEncoder().encode(city) { UserDefaults.standard.set(data, forKey: "selectedCity") }
         UserDefaults.standard.set(schoolLevel.rawValue, forKey: "schoolLevel")
         week = nil; message = nil; generation += 1
+    }
+    func findCities(name: String, postalCode: String) async throws -> [CanteenCity] {
+        let value = try await service.lookup(name: name.trimmingCharacters(in: .whitespacesAndNewlines), postalCode: postalCode)
+        if value.isEmpty { throw FoodiError.api("Aucune source publique") }
+        return value
     }
     func selectSchoolLevel(_ value: SchoolLevel) {
         guard schoolLevel != value else { return }

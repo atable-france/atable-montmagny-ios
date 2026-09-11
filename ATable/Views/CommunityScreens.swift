@@ -218,7 +218,7 @@ struct ProfileScreen: View {
                 }
                 Section("Ma cantine") {
                     Picker("Ville", selection: Binding(get: { menus.city }, set: { menus.selectCity($0) })) {
-                        ForEach(CanteenCity.allCases) { Text("\($0.name) · \($0.postalCode)").tag($0) }
+                        ForEach(menus.availableCities) { Text("\($0.name) · \($0.postalCode)").tag($0) }
                     }
                     if menus.city.supportsNursery {
                         Picker("Établissement", selection: Binding(get: { menus.schoolLevel }, set: { menus.selectSchoolLevel($0) })) {
@@ -230,7 +230,7 @@ struct ProfileScreen: View {
                 }
                 Section("À propos") {
                     Text("À table est une application indépendante de lecture des menus scolaires. Les données proviennent de Foodi ou des publications officielles des villes.").font(.footnote)
-                    Text("Version 0.2 · Montmagny et Argenteuil").font(.caption).foregroundStyle(.secondary)
+                    Text("Version 0.3 · Recherche automatique des villes").font(.caption).foregroundStyle(.secondary)
                 }
                 if community.signedIn {
                     Section {

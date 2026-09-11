@@ -33,4 +33,12 @@ final class MenuTests: XCTestCase {
         let bad = WeekMenu(weekStart: week.weekStart, fetchedAt: week.fetchedAt, restaurant: RestaurantRef(id: "wrong", name: "Other"), days: week.days)
         XCTAssertThrowsError(try bad.validate(for: MenuDate.weekDates(MenuDate.parse(week.weekStart)!)))
     }
+    func testDiscoveredCityCanBeSaved() throws {
+        let city = CanteenCity(rawValue: "fr-78586-78500", name: "Sartrouville", postalCode: "78500", supportsNursery: false,
+            municipalURL: URL(string: "https://www.sartrouville.fr/vivre-a-sartrouville/scolaire/restauration-scolaire/")!)
+        let restored = try JSONDecoder().decode(CanteenCity.self, from: JSONEncoder().encode(city))
+        XCTAssertEqual(restored, city)
+        XCTAssertEqual(CanteenCity(rawValue: "montmagny"), .montmagny)
+        XCTAssertNil(CanteenCity(rawValue: "ville-inconnue"))
+    }
 }

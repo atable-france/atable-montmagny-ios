@@ -53,17 +53,27 @@ struct MenuItem: Codable, Identifiable, Hashable {
     var diet: Diet { reportedDiet ?? Diet.classify(label) }
 }
 
-enum CanteenCity: String, CaseIterable, Identifiable {
-    case montmagny, argenteuil
+struct CanteenCity: Codable, Hashable, Identifiable {
+    let rawValue: String
+    let name: String
+    let postalCode: String
+    let supportsNursery: Bool
+    let municipalURL: URL
     var id: String { rawValue }
-    var name: String { self == .montmagny ? "Montmagny" : "Argenteuil" }
-    var postalCode: String { self == .montmagny ? "95360" : "95100" }
-    var supportsNursery: Bool { self == .argenteuil }
-    var municipalURL: URL {
-        switch self {
-        case .montmagny: URL(string: "https://www.villedemontmagny.fr/enfance/le-periscolaire/la-restauration-scolaire/")!
-        case .argenteuil: URL(string: "https://www.argenteuil.fr/fr/restauration-scolaire")!
-        }
+
+    static let montmagny = CanteenCity(rawValue: "montmagny", name: "Montmagny", postalCode: "95360", supportsNursery: false,
+        municipalURL: URL(string: "https://www.villedemontmagny.fr/enfance/le-periscolaire/la-restauration-scolaire/")!)
+    static let argenteuil = CanteenCity(rawValue: "argenteuil", name: "Argenteuil", postalCode: "95100", supportsNursery: true,
+        municipalURL: URL(string: "https://www.argenteuil.fr/fr/restauration-scolaire")!)
+    static let allCases = [montmagny, argenteuil]
+
+    init?(rawValue: String) {
+        guard let value = Self.allCases.first(where: { $0.rawValue == rawValue }) else { return nil }
+        self = value
+    }
+    init(rawValue: String, name: String, postalCode: String, supportsNursery: Bool, municipalURL: URL) {
+        self.rawValue = rawValue; self.name = name; self.postalCode = postalCode
+        self.supportsNursery = supportsNursery; self.municipalURL = municipalURL
     }
 }
 

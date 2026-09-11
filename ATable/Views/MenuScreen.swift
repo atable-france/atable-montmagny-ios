@@ -9,6 +9,7 @@ struct MenuScreen: View {
     @State private var selectedDate = MenuDate.key(MenuDate.today)
     @State private var selectedItem: MenuItem?
     @State private var showLegend = false
+    @State private var showCitySearch = false
 
     private var dates: [String] { MenuDate.weekDates(store.monday) }
     private var selectedDay: MenuDay? { store.week?.days.first { $0.date == selectedDate } }
@@ -55,6 +56,7 @@ struct MenuScreen: View {
             }
             .sheet(item: $selectedItem) { item in DishDetail(item: item) }
             .sheet(isPresented: $showLegend) { LegendSheet() }
+            .sheet(isPresented: $showCitySearch) { CitySearchView() }
         }
     }
 
@@ -73,7 +75,7 @@ struct MenuScreen: View {
     private var citySelector: some View {
         VStack(alignment: .leading, spacing: 10) {
             Menu {
-                ForEach(CanteenCity.allCases) { city in
+                ForEach(store.availableCities) { city in
                     Button {
                         store.selectCity(city)
                     } label: {
@@ -81,6 +83,8 @@ struct MenuScreen: View {
                         else { Text("\(city.name) · \(city.postalCode)") }
                     }
                 }
+                Divider()
+                Button { showCitySearch = true } label: { Label("Ajouter une ville", systemImage: "magnifyingglass") }
             } label: {
                 HStack(spacing: 12) {
                     Image(systemName: "mappin.and.ellipse").foregroundStyle(Palette.green)
@@ -276,6 +280,51 @@ struct MenuScreen: View {
             }.buttonStyle(.borderedProminent)
             Button("Réessayer") { Task { await store.load(force: true) } }.disabled(store.loading)
         }.padding(.vertical, 20)
+    }
+}
+
+private struct CitySearchView: View {
+    @EnvironmentObject private var store: MenuStore
+    @Environment(\.dismiss) private var dismiss
+    @State private var name = ""
+    @State private var postalCode = ""
+    @State private var choices: [CanteenCity] = []
+    @State private var loading = false
+    @State private var error: String?
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("Votre commune") {
+                    TextField("Ville", text: $name).textContentType(.addressCity)
+                    TextField("Code postal", text: $postalCode).keyboardType(.numberPad).textContentType(.postalCode)
+                    Button {
+                        loading = true; error = nil; choices = []
+                        Task {
+                            do {
+                                let found = try await store.findCities(name: name, postalCode: postalCode)
+                                if found.count == 1 { store.selectCity(found[0]); dismiss() }
+                                else { choices = found }
+                            } catch { self.error = "Aucune source de menu publique n’a été trouvée pour cette commune." }
+                            loading = false
+                        }
+                    } label: { if loading { ProgressView() } else { Label("Rechercher les menus", systemImage: "magnifyingglass") } }
+                    .disabled(loading || name.trimmingCharacters(in: .whitespacesAndNewlines).count < 2 || postalCode.count != 5)
+                }
+                if !choices.isEmpty {
+                    Section("Cantines trouvées") {
+                        ForEach(choices) { city in
+                            Button("\(city.name) · \(city.postalCode)") { store.selectCity(city); dismiss() }
+                        }
+                    }
+                }
+                if let error { Section { Text(error).foregroundStyle(Palette.red) } }
+                Section { Text("L’application vérifie Foodi puis les publications officielles de la mairie. Certains prestataires demandent ensuite un compte.").font(.footnote).foregroundStyle(.secondary) }
+            }
+            .navigationTitle("Ajouter ma ville")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar { ToolbarItem(placement: .cancellationAction) { Button("Fermer") { dismiss() } } }
+        }
     }
 }
 
