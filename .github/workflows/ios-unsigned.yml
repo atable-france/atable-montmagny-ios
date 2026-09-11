@@ -3,7 +3,12 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths-ignore: ['**.md', 'backend/**']
+    paths:
+      - 'ATable/**'
+      - 'ATableTests/**'
+      - 'ATableUITests/**'
+      - 'project.yml'
+      - '.github/workflows/ios-unsigned.yml'
 permissions:
   contents: read
 concurrency:

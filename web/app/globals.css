@@ -28,6 +28,9 @@ h1 span { color:var(--green); font-style:italic; }
 .city-shortcuts { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
 .city-shortcuts button { border:1px solid var(--line); border-radius:999px; padding:7px 11px; color:var(--muted); background:white; cursor:pointer; font-size:.76rem; }
 .city-shortcuts button.selected { color:var(--green); border-color:var(--green); background:var(--green-soft); font-weight:700; }
+.source-choices { display:grid; gap:8px; margin-top:14px; }
+.source-choices button { display:flex; justify-content:space-between; gap:16px; text-align:left; padding:12px 14px; color:var(--ink); background:white; border:1px solid var(--line); border-radius:13px; cursor:pointer; }
+.source-choices span { color:var(--green); font-size:.78rem; font-weight:700; }
 .location-notice { margin:14px 2px 0; padding:11px 13px; border-radius:12px; font-size:.82rem; line-height:1.45; }
 .location-notice.success { color:var(--green); background:var(--green-soft); }
 .location-notice.info { color:var(--ink); background:#f5ead3; }
@@ -56,13 +59,24 @@ select:focus,input:focus,textarea:focus { border-color:var(--green); box-shadow:
 .dish i { width:7px; height:7px; background:#a7ada9; border-radius:50%; margin-top:4px; }.dish.meat i { background:var(--red); }.dish.fish i,.dish.vegetarian i { background:var(--green); }
 .dish em { grid-column:2; width:max-content; font-style:normal; font-size:.6rem; padding:2px 6px; border-radius:20px; color:var(--green); background:var(--green-soft); }.dish.meat em { color:var(--red); background:var(--red-soft); }
 .empty,.status { padding:40px 20px; text-align:center; color:var(--muted); }.status { min-height:220px; }.error { color:var(--red); }
+.provider-notice { margin:18px 0; padding:22px; }
+.provider-notice h2,.moderation h2 { margin:0 0 8px; font:600 1.35rem "Fraunces",serif; }
+.provider-notice p { margin:7px 0 14px; color:var(--muted); }
+.provider-notice a { display:inline-block; margin:5px 8px 0 0; text-decoration:none; }
 .source { text-align:right; font-size:.75rem; }.source a { color:var(--green); }
 .bottom { position:fixed; z-index:10; bottom:16px; left:50%; transform:translateX(-50%); display:flex; gap:4px; background:rgba(255,253,248,.92); backdrop-filter:blur(18px); padding:7px; border:1px solid var(--line); border-radius:22px; box-shadow:0 14px 50px rgba(25,53,43,.16); }
 .bottom button { border:0; background:none; color:var(--muted); padding:9px 18px; border-radius:15px; display:grid; place-items:center; gap:2px; font-size:.71rem; cursor:pointer; }.bottom button span { font-size:1.15rem; }.bottom button.active { color:white; background:var(--green); }
 .auth { max-width:520px; display:grid; gap:17px; padding:25px; }.auth h2,.settings h2 { font:600 1.65rem "Fraunces",serif; margin:0 0 6px; }.primary { border:0; border-radius:13px; padding:13px 18px; background:var(--green); color:white; font-weight:700; cursor:pointer; }.link { border:0; background:none; color:var(--green); font-weight:700; cursor:pointer; padding:10px; }
-.conversation { max-width:760px; padding:20px; }.conversation article { border-bottom:1px solid var(--line); padding:13px 4px; }.conversation article b { margin-right:10px; }.conversation time { color:var(--muted); font-size:.7rem; }.conversation article p { margin:8px 0 0; }.conversation form { display:grid; grid-template-columns:1fr auto; gap:10px; margin-top:18px; }.conversation textarea { resize:vertical; min-height:52px; }
+.conversation { max-width:760px; padding:20px; }.conversation article { border-bottom:1px solid var(--line); padding:13px 4px; }.conversation article b { margin-right:10px; }.conversation time { color:var(--muted); font-size:.7rem; }.conversation article>small { margin-left:8px; color:var(--red); }.conversation article p { margin:8px 0 0; }.conversation form { display:grid; grid-template-columns:1fr auto; gap:10px; margin-top:18px; }.conversation textarea { resize:vertical; min-height:52px; }
+.day-card>.conversation { padding:12px; border-top:1px solid var(--line); background:#fff; }
+.day-card>.conversation article { font-size:.78rem; }.day-card>.conversation .auth { box-shadow:none; border:0; padding:12px 0; }
+.comments-toggle { width:100%; margin-top:14px; padding:11px; color:var(--green); background:var(--green-soft); border:0; cursor:pointer; font-weight:700; }
+.comments-auth { padding:12px; font-size:.78rem; }.comments-auth>p { color:var(--muted); }
+.message-actions { display:flex; gap:6px; justify-content:flex-end; }.message-actions .link { padding:4px; font-size:.7rem; }.message-actions .danger,.form-error { color:var(--red); }
+.hidden-message { opacity:.62; background:var(--red-soft); }
 .settings { max-width:620px; padding:24px; }.settings>div { display:flex; align-items:center; justify-content:space-between; padding:17px 0; border-bottom:1px solid var(--line); }.settings span { display:grid; gap:3px; }.settings small { color:var(--muted); }.settings div button { border:1px solid var(--green); color:var(--green); background:white; border-radius:12px; padding:8px 12px; font-weight:700; }
 .inbox { margin-top:20px; padding-top:14px; border-top:1px solid var(--line); }.inbox h3 { font:600 1.25rem "Fraunces",serif; }.inbox article { padding:12px 0; border-bottom:1px solid var(--line); }.inbox article p { margin:5px 0; color:var(--muted); }
+.moderation { max-width:620px; margin-top:16px; padding:24px; }
 @media (max-width:900px) { .week-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.week-grid .day-card:last-child { grid-column:1/-1; } }
 @media (max-width:700px) { .city-search { grid-template-columns:1fr 1fr; }.city-search .primary { grid-column:1/-1; } }
 @media (max-width:560px) { main { padding:34px 16px 28px; }.top { height:62px; padding:0 16px; }.controls,.city-search { display:grid; grid-template-columns:1fr; }.city-search .primary { grid-column:auto; }.school-level { margin-left:0; }.week-grid { display:grid; grid-template-columns:1fr; }.week-grid .day-card:last-child { grid-column:auto; }.day-card { min-height:auto; }.bottom { width:calc(100% - 24px); justify-content:space-around; bottom:10px; }.bottom button { flex:1; padding:8px 6px; }.legend { flex-wrap:wrap; }.conversation form { grid-template-columns:1fr; } }

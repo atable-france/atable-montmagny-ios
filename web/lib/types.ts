@@ -20,4 +20,7 @@ export type WeekMenu = {
   schoolLevel?: "elementary" | "nursery";
   days: MenuDay[];
   stale?: boolean;
+  documents?: { title: string; url: string }[];
+  accessCode?: string;
+  requiresAccount?: boolean;
 };

@@ -1,4 +1,5 @@
 export type CitySource =
+  | { kind: "municipal"; municipalUrl: string; links: { title: string; url: string }[]; accessCode?: string; requiresAccount?: boolean }
   | { kind: "foodi"; posId: string; municipalUrl: string }
   | { kind: "argenteuil-pdf"; elementaryUrl: string; nurseryUrl: string; municipalUrl: string };
 
@@ -7,6 +8,7 @@ export type City = {
   name: string;
   postalCode: string;
   aliases?: string[];
+  restaurantName?: string;
   source: CitySource;
 };
 
